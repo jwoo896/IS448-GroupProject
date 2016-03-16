@@ -5,18 +5,19 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
   <head>
     <title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-
-  </head>
+	   <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <!--Comments-->
   <body>
 	<h1>Enter Your Pin Below</h1>
   <form name="verifyUser" action="verifyUser.php" method="post">
 
-  <label>
-  Employee Pin: <input type="text" name="employeePin" />
-  </label>
+  <label>Employee Pin:</label>
+  <input type="text" name="employeePin" />
+  <input type="submit" value="Login"/>
+  </form>
   <br /><br />
    <a href="administratorLogin.html">Adminstrator's Login</a>
-  </form>
+
   </body>
 </html>
