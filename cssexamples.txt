@@ -1,0 +1,70 @@
+html {
+    background-color: beige;
+}
+/* 
+ID Selector 
+<p id="para1">Hello World!</p>
+*/
+
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+/*Class Selector
+<p class= “normal”>Normal Text</p>
+*/
+
+p.normal{
+  font-size: 12pt;
+}
+
+/*Generic Selector
+<p > 
+    It sure is fun to be in 
+   <span class="spanred">total</span> 
+   control
+</p> 
+*/
+.spanred{
+  font-size: 24pt;
+  font-family: Arial; color: red
+}
+/*Examples of CSS you may need */
+body{
+  font-weight: bold; 
+  font-size: 12pt;
+  line-height: 14pt; 
+  font-family: Helvetica; 
+  font-variant: normal;
+  font-style: normal,italic,bold;
+  font-family: "Garamond", "Century Gothic", serif;
+  
+  height: 100px;
+  width: 100px;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  
+  /*width,style,color*/
+  border: 10px solid #D8C858;
+      
+}
+
+
+hr {
+    width: 90%;
+    border: 1px solid #D8C858;
+}
+
+h1, h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+input[type="submit"] {
+    font-size: 2em;
+    width: 100%;
+}
