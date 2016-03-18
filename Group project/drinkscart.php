@@ -1,5 +1,7 @@
 <?php
 	setcookie("cartqueue", $cartq);	
+
+	print_r($_COOKIE);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -24,15 +26,17 @@
 		$itemNames=array();
 
 		if (!empty($deerpark)){
-			$deerparktotal=($deerpark[0]*.50);
-			array_push($cartq, "deerpark"=>$deerparktotal);
+			$deerparkQuantity=$deerpark[0];
+			$deerparktotal=($deerparkQuantity * 0.50);
+			$cartq["deerpark"]=$deerparktotal;
 			array_push($itemNames, "Deer Park");
 
 		}
-		if (!empty($dpepsi)){
-			$dpepsitotal=($dpepsi[0]*.75);
-			array_push($cartq, "dpepsi"=>$dpepsitotal);
-			array_push($itemNames, "Diet Pepsi");
+		if (!empty($canadadry)){
+			$canadadryQuantity = $canadadry[0];
+			$canadadrytotal=($canadadryQuantity * 0.75);
+			$cartq["canadadry"]=$canadadrytotal;
+			array_push($itemNames, "Canada Dry");
 		}
 	?>
 	<div id="divWrapper">
