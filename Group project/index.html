@@ -10,17 +10,16 @@
     
   <body>
 	<h1>Enter Your Pin Below</h1>
+  <!--maybe turn this into a js function instead. otherwise look into rerouting with php-->
   <form name="verifyUser" action="verifyUser.php" method="post">
 
   <label>Employee Pin:</label>
   <input type="text" name="employeePin" />
   <br/>
-  <input type="radio" name="" value="admin"/>Administrator
-  <input type="radio" name="" value=""/>Accountant<br/>
+  <input type="radio" name="admin" value="admin"/>Administrator
+  <input type="radio" name="accountant" value=""/>Accountant<br/>
   <input type="submit" value="Login"/>
   </form>
-  <br /><br />
-   <a href="administratorLogin.html">Adminstrator's Login</a>
 
   </body>
 </html>
