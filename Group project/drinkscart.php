@@ -1,7 +1,5 @@
 <?php
-	session_start();
-	setcookie("cartqueue", $cartq);
-	}
+	setcookie("cartqueue", $cartq);	
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -61,6 +59,7 @@
 	<hr/>
 	</p>
 
+	<div id="divBody">
 	<table>
 		<tr>
 			<td>
@@ -201,6 +200,6 @@
 			</td>
 		</tr>
 	</table>
-	
+	</div>
 </body>
 </html>
