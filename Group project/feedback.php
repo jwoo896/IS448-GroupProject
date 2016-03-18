@@ -6,6 +6,9 @@
 	<script type="text/javascript" src="POS.js"></script>
 </head>
 <body>
+	<?php
+		//$_POST['feedback'] and write to a file
+	?>
 	<div id="divWrapper">
 	<div id="divImageHead">
 		<p>
@@ -29,11 +32,9 @@
 	<p>
 	<hr/>
 	</p>
-	<form method="POST" action="feedback.php" id="feedbackform">
-	Send us some feedback!<br/>
-	<textarea rows="10" cols="50" name="feedback" form="feedbackform"></textarea>
-	<input type="submit" value="Submit"/>
-	</form>
+
+	<p>
+		Thank you for your feedback!
+	</p>
 </body>
 </html>
-

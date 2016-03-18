@@ -1,17 +1,22 @@
 <?php
+	//have the form that takes info point back to this page. echo out the added info somewhere
 	$server = mysql_connect("studentdb-maria.gl.umbc.edu", "jwoo2", "jwoo2");
 	$db = mysql_select_db("jwoo2")
-	$currentPin=$_POST['employeePin'];
-	$userQuery="SELECT name FROM employee WHERE pin = $currentPin";
-	$currentUsername = mysql_query($userQuery);
+	$newPin = $_POST['newpin'];
+	$newUname = $_POST['newName'];
+	$addUser = "INSERT INTO employee VALUES($newPin, $newUname)";
 
-	session_start();
-	if(isset($_COOKIE["currentUser"])){
-		$currentUser = $_COOKIE["currentUser"];
-	}else {
-		setcookie("currentUser", $currentUsername]);
+	$result = mysql_query($addUser);
+	if(!$result){
+		echo "Error - query could not be executed. User was not added.";
+		$errorM = mysql_error();
+		echo "<p> $error </p>";
+		exit;
+	}else{
+		echo "$newUname has been added with the pin: $newPin.";
 	}
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -44,22 +49,11 @@
 	<hr/>
 	</p>
 	<div id="divBody">
-		<h3> Food Categories </h3> <!--Style the header-->
+		<form method="POST" action="">
+		New employee's name: <input type="text" name="newName"/><br/>
+		New employee's 4 digit pin: <input type="text" name="newPin" size="4" maxlength="4"/>
+		<input type="submit" value="Submit"/>
+	</div>
 
-			<!--add styling to positioning of menu items-->
-			<table>
-				<tr>
-					<td><a href="drinksmenu.html"><img src="POS design/drinks.png" alt="Apple image"/></a></td>
-					<td><a href=""><img src="POS design/chips.png" alt="Chips image"/></a></td>
-					<td><a href=""><img src="POS design/granolabars.png" alt="Granola Bars image"/></a></td>
-				</tr>
-				<tr>
-					<td><a href=""><img src="POS design/fruits.png" alt="Fruits image"/></a></td>
-					<td><a href=""><img src="POS design/cookies.jpeg" alt="Cookies image"/></a></td>
-					<td><a href=""><img src="POS design/yogurt.png" alt="Yogurt image"/></a></td>
-				</tr>
-			</table>
-	</div>
-	</div>
 </body>
 </html>
