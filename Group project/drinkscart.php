@@ -5,17 +5,21 @@
 <body>
 	<?php
 		/*drinks menu items*/
-		$pepsi=$_POST['pepsi'];
-		$dpepsi=$_POST['dietpepsi'];
+		$deerpark = $_POST['deerpark'];
+		$canadadry = $_POST['canadadry'];
+		$izze = $_POST['izze'];
+		$pepsi = $_POST['pepsi'];
+		$rootbeer = $_POST['rootbeer'];
+		$sprite = $_POST['sprite'];
 
 		//empty array
 		$cartq=array();
 		$itemNames=array();
 
-		if (!empty($pepsi)){
-			$pepsitotal=($pepsi[0]*.75);
-			array_push($cartq, "pepsi"=>$pepsitotal);
-			array_push($itemNames, "Pepsi");
+		if (!empty($deerpark)){
+			$deerparktotal=($deerpark[0]*.50);
+			array_push($cartq, "deerpark"=>$deerparktotal);
+			array_push($itemNames, "Deer Park");
 		}
 		if (!empty($dpepsi)){
 			$dpepsitotal=($dpepsi[0]*.75);
