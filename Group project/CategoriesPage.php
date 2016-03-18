@@ -1,4 +1,4 @@
-<?php
+<!--<?php/*
 	$server = mysql_connect("studentdb-maria.gl.umbc.edu", "jwoo2", "jwoo2");
 	$db = mysql_select_db("jwoo2")
 	$currentPin=$_POST['employeePin'];
@@ -11,7 +11,7 @@
 	}else {
 		setcookie("currentUser", $currentUsername]);
 	}
-?>
+*/?>-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

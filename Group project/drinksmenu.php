@@ -1,4 +1,15 @@
 <?php include 'drinkscart.php'; ?>
+<?php
+	session_start();
+	if(isset($_SESSION["visits"])){
+		foreach($cartq as $index=>$item){
+				setcookie($index, $item);
+		}
+		$_SESSION["visits"]++;
+	}else {
+		$_SESSION["visits"]=1;
+	}	
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,6 +34,7 @@
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
+		<li><button onclick="resetSession()">reset Session</button>
 		</ul>
 		</div>
 	</div>
@@ -34,7 +46,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/deerpark.jpg" alt="Deer Park"/><br/>
 				Quantity <select name="deerpark">
 							<option>0</option>
@@ -58,7 +70,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
 				Quantity <select name="canadadry">
 							<option>0</option>
@@ -80,7 +92,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/izze.jpg" alt="Izze"/><br/>
 				Quantity <select name="izze">
 							<option>0</option>
@@ -104,7 +116,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/pepsi.jpg" alt="Pepsi"/><br/>
 				Quantity <select name="pepsi">
 							<option>0</option>
@@ -126,7 +138,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/rootbeer.jpg" alt="Root Beer"/><br/>
 				Quantity <select name="rootbeer">
 							<option>0</option>
@@ -148,7 +160,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php">
+			<form method="POST" action="">
 				<img src="POS design/drinks/sprite.png" alt="Sprite"/><br/>
 				Quantity <select name="Sprite">
 							<option>0</option>
