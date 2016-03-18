@@ -34,7 +34,6 @@
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
-		<li><button onclick="resetSession()">reset Session</button>
 		</ul>
 		</div>
 	</div>

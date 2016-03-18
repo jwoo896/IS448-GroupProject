@@ -22,10 +22,3 @@ window.onclick = function(event){
 		
 	}
 }
-
-function resetSession(){
-	document.getElementById("reset");
-	session_start();
-	session_unset();
-	session_destroy();
-}
