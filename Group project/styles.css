@@ -2,43 +2,68 @@
 	background-color:#E6E6E6;
 }
 #divWrapper {
+	min-width:500px;
 	width:79%;
-	height:1000px;
+	display:block;
+	overflow:auto;
 	margin:auto;
 	background-color:white;
 	padding:1%;
+	box-shadow: 0px 0px 10px grey;
 }
 #divImageHead {
 	height:10%;
-	width:50%;
+	width:20%;
 	position:relative;
 	float:left;
 }
-#divImageHead img {
-	margin-top:-3%;
+#divLogo {
+	margin-top:-1%;
+	width:25%;
+	position:relative;
+	float:left;
+}
+#divLogo img {
+	width:100%;
 }
 #divMenu {
 	height:10%;
-	width:50%;
+	width:80%;
 	position:relative;
 	float:left;
 	font-size:large;
+	padding-top:4%;
 }
 #menuPosition {
-	position:absolute;
-	bottom:0;
-	right:0;
+	float:right;
 }
 #divBody {
 	text-align:center;
+	position:relative;
+	float:left;
+	width:100%;
 }
 #divBody a {
 	text-align:center;
 }
 #divBody table {
-	position:relative;
 	text-align:center;
 	margin:auto;
+	width:95%;
+}
+#divBody img {
+	opacity:.8;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	
+	width:85%;
+}
+#divBody img:hover {
+	opacity:1;
 }
 ul{
 	list-style-type: none;
@@ -59,4 +84,6 @@ li a, .dropbtn{
 	padding: 14px 16px;
 	text-decoration: none;
 }
-
+.tableStriped tr:nth-child(odd) {
+	background-color:#E9E9E9;
+}
