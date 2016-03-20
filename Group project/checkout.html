@@ -33,7 +33,7 @@
 	<div id="divBody">
 		<h1>Checkout</h1>
 		
-		<table>
+		<table class="tableStriped">
 			<tr>
 				<th>Item</th>
 				<th>Price</th>
@@ -59,8 +59,8 @@
 				<td>$1.32</td>
 			</tr>
 		</table>
-		</br>
-		<table>
+		<br/>
+		<table style="width:25%;float:right;position:relative;" class="tableStriped">
 			<tr>
 				<th>Sub-Total</th>
 				<td>$3.65</td>
@@ -73,11 +73,16 @@
 				<th>Total</th>
 				<td>$3.87</td>
 			</tr>
+			<tr>
+				<th></th>
+				<td style="background-color:white;">
+					<form action="checkout.php">
+					<input type="submit" value="Submit"/>
+					</form>
+				</td>
+			</tr>
+		
 		</table>
-		</br>
-		<form action="checkout.php">
-			<input type="submit" value="Submit">
-		</form>
 	</div>
 
 </body>
