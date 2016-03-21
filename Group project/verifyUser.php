@@ -6,6 +6,7 @@
 	**
 	*/
 	session_start();
+	$_SESSION["auth"] = false;
 	require_once("libs.php");
 
 		$pin = $_POST["pin"];
@@ -19,7 +20,8 @@
 		switch($permission){
 			case "administrator":
 				//Will be replaced with admin page redirect
-				header("Location:admin.html");
+				$_SESSION["auth"] = true;
+				header("Location:admin.php");
 				break;
 
 			case "guest":
@@ -29,7 +31,8 @@
 
 			case "accountant":
 				//Will be replaced with accountant page redirect
-				header("Location:accountant.html");
+				$_SESSION["auth"] = true;
+				header("Location:accountant.php");
 				break;
 			default:
 				echo("invalid credentials");
@@ -49,5 +52,5 @@
 		} 
 		*/
 	disconnect($conn);
-	session_destroy();
+	
 ?>
