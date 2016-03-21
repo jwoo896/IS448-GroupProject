@@ -1,5 +1,12 @@
 <?php
+	/*
+	**Authored:  Joshua Standiford
+	**Date Modified: 3/20/2016
+	**Description: This file is used to validate user credentials via PIN system.  The user's pin holds the weight for users access permissions
+	**
+	*/
 	session_start();
+	$_SESSION["auth"] = false;
 	require_once("libs.php");
 
 		$pin = $_POST["pin"];
@@ -13,7 +20,8 @@
 		switch($permission){
 			case "administrator":
 				//Will be replaced with admin page redirect
-				echo("admin");
+				$_SESSION["auth"] = true;
+				header("Location:admin.php");
 				break;
 
 			case "guest":
@@ -23,7 +31,8 @@
 
 			case "accountant":
 				//Will be replaced with accountant page redirect
-				echo("Numbers baby");
+				$_SESSION["auth"] = true;
+				header("Location:accountant.php");
 				break;
 			default:
 				echo("invalid credentials");
@@ -43,5 +52,5 @@
 		} 
 		*/
 	disconnect($conn);
-	session_destroy();
+	
 ?>
