@@ -18,13 +18,15 @@
 	float:left;
 }
 #divLogo {
-	margin-top:-1%;
+	margin-top:-2%;
 	width:25%;
 	position:relative;
 	float:left;
+	
 }
 #divLogo img {
 	width:100%;
+	display:inline-block;
 }
 #divMenu {
 	height:10%;
@@ -34,8 +36,12 @@
 	font-size:large;
 	padding-top:4%;
 }
+#divMenu a:hover {
+	color:#7B7B7B;
+}
 #menuPosition {
 	float:right;
+	position:relative;
 }
 #divBody {
 	text-align:center;
@@ -59,8 +65,11 @@
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
-	
-	width:85%;
+	height:20vh;
+
+}
+#divBody td {
+	width:33.33%
 }
 #divBody img:hover {
 	opacity:1;
