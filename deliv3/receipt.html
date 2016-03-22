@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ADG Creative Cafe </title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<script type="text/javascript" src="POS.js"></script>
+</head>
+<body>
+	<div id="divWrapper">
+	<div id="divImageHead">
+		<p>
+			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
+		</p>
+	</div>
+	
+	
+	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
+	<div id="divMenu">
+		<div id="menuPosition">
+		<ul>
+			<li><a href="CategoriesPage.html">Categories</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="logout.php">Logout</a></li>
+		<li><a href="checkout.html">Cart</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<p>
+	<hr/>
+	</p>
+	
+	<div id="divBody">
+		<h1>Receipts</h1>
+		
+		<table class="tableStriped">
+			<tr>
+				<th>Employee ID</th>
+				<th>Employee Name</th>
+				<th>Receipt ID</th>
+				<th>Date of Generation</th>
+			</tr>
+			<tr>
+				<td>12345</td>
+				<td>Jae Woo</td>
+				<td>23456</td>
+				<td>2/10/16</td>
+			</tr>
+			<tr>
+				<td>12346</td>
+				<td>Josh Standiford</td>
+				<td>23457</td>
+				<td>1/18/16</td>
+			</tr>
+			<tr>
+				<td>12347</td>
+				<td>Brandon Tesar</td>
+				<td>23458</td>
+				<td>2/13/16</td>
+			</tr>
+			<tr style="background-color:white;">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<form action="receipt.php">
+					<input type="submit" value="Update Payrolls"/>
+					</form>
+				</td>
+				
+		</tr>
+		</table>
+	</div>
+
+</body>
+</html>

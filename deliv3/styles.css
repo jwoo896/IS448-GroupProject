@@ -1,0 +1,98 @@
+﻿body {
+	background-color:#E6E6E6;
+}
+#divWrapper {
+	min-width:500px;
+	width:79%;
+	display:block;
+	overflow:auto;
+	margin:auto;
+	background-color:white;
+	padding:1%;
+	box-shadow: 0px 0px 10px grey;
+}
+#divImageHead {
+	height:10%;
+	width:20%;
+	position:relative;
+	float:left;
+}
+#divLogo {
+	margin-top:-2%;
+	width:25%;
+	position:relative;
+	float:left;
+	
+}
+#divLogo img {
+	width:100%;
+	display:inline-block;
+}
+#divMenu {
+	height:10%;
+	width:80%;
+	position:relative;
+	float:left;
+	font-size:large;
+	padding-top:4%;
+}
+#divMenu a:hover {
+	color:#7B7B7B;
+}
+#menuPosition {
+	float:right;
+	position:relative;
+}
+#divBody {
+	text-align:center;
+	position:relative;
+	float:left;
+	width:100%;
+}
+#divBody a {
+	text-align:center;
+}
+#divBody table {
+	text-align:center;
+	margin:auto;
+	width:95%;
+}
+#divBody img {
+	opacity:.8;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	height:20vh;
+
+}
+#divBody td {
+	width:33.33%
+}
+#divBody img:hover {
+	opacity:1;
+}
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+li{
+	float: left;
+}
+
+li a, .dropbtn{
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.tableStriped tr:nth-child(odd) {
+	background-color:#E9E9E9;
+}
