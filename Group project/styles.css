@@ -11,8 +11,15 @@
 	padding:1%;
 	box-shadow: 0px 0px 10px grey;
 }
-#divImageHead {
+#divHeader {
+	width:100%;
 	height:10%;
+	border-bottom:thin #ABABAB solid;
+	float:left;
+	position:relative;
+}
+#divImageHead {
+	height:100%;
 	width:20%;
 	position:relative;
 	float:left;
@@ -22,20 +29,18 @@
 	width:25%;
 	position:relative;
 	float:left;
-	
 }
 #divLogo img {
 	width:100%;
 	display:inline-block;
 }
 #divMenu {
-	height:10%;
+	height:100%;
 	width:80%;
 	position:relative;
 	float:left;
 	font-size:large;
-	padding-top:4%;
-}
+	padding-top:4%;}
 #divMenu a:hover {
 	color:#7B7B7B;
 }
