@@ -3,7 +3,7 @@ session_start();
 function connect(){
 
 	$db ="jstand1";
-	$conn = @mysql_connect("studentdb-maria.gl.umbc.edu", "jstand1", "jstand1");
+	$conn = mysql_connect("studentdb-maria.gl.umbc.edu", "jstand1", "jstand1");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
