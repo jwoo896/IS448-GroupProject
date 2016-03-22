@@ -30,7 +30,7 @@ session_start();
 			<li><a href="CategoriesPage.html">Categories</a></li>
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
-		<li><a href="cart.php">Cart</a></li>
+		<li><a href="checkout.html">Cart</a></li>
 		</ul>
 		</div>
 	</div>
