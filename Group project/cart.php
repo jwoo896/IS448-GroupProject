@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	$_SESSION['drinks'] = $drinksvar;
-	$_SESSION['chips'] = $chipsvar;
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,14 +43,15 @@
 			<th>Quantity</th>
 			<th>Price</th>
 		</tr>
-		<?php if (!empty($_SESSION['drinks'])){foreach($_SESSION['drinks'] as $index=>$quantity){?>
+		<?php if (array_key_exists('drinks', $_SESSION)) {
+				foreach($_SESSION['drinks'][0] as $item => $quantity){
+		?>
 			<tr>
-				<td><?php echo $index?></td>
+				<td><?php echo $item?></td>
 				<td><?php echo $quantity?></td>
 			</tr>
 		<?php }}?>
 
 	</table>
-	test link
 </body>
 </html>
