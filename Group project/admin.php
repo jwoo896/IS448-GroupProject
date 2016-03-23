@@ -1,10 +1,6 @@
 <?php
-
-session_start();
-	if(!$_SESSION["auth"]){
-		header("Location:indexed.html");
-	}
-
+ 	require_once("libs.php");
+	credCheck();
 //session_destroy();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -31,6 +27,7 @@ session_start();
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="checkout.html">Cart</a></li>
+		<li><a href="addUser.php">Add User</a></li>
 		</ul>
 		</div>
 	</div>
