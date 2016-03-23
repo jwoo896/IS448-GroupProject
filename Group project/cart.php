@@ -1,4 +1,9 @@
+<?php
+	session_start();
+	$_SESSION['drinks'] = $drinksvar;
+	$_SESSION['chips'] = $chipsvar;
 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,21 +36,24 @@
 	<hr/>
 	</p>
 	<?php
-	/*write items of each category to file*/
+	//write items of each category to file IF user hits confirm
 
 	?>
-		<!--<table border="1px">
+		<table border="1px">
 		<caption> Your Order </caption>
 		<tr>
 			<th>Item</th>
 			<th>Quantity</th>
 			<th>Price</th>
 		</tr>
-		<?php foreach($cartq as $index=>$item){?>
+		<?php if (!empty($_SESSION['drinks'])){foreach($_SESSION['drinks'] as $index=>$quantity){?>
 			<tr>
-				<td><?php echo $itemName?>
-		<?php }?>
-	</table>-->
+				<td><?php echo $index?></td>
+				<td><?php echo $quantity?></td>
+			</tr>
+		<?php }}?>
+
+	</table>
 	test link
 </body>
 </html>
