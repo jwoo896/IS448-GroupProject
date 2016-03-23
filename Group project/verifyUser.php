@@ -27,7 +27,7 @@
 			case "guest":
 				//Will be replaced with guest page redirect
 				$_SESSION["auth"] = true;
-				header("Location:CategoriesPage.php")
+				header("Location:CategoriesPage.php");
 				break;
 
 			case "accountant":
