@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +23,7 @@
 		<ul>
 			<li><a href="CategoriesPage.html">Categories</a></li>
 		<li><a href="contact.html">Contact</a></li>
-		<li><a href="">Logout</a></li>
+		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		</ul>
 		</div>
@@ -30,21 +33,25 @@
 	<hr/>
 	</p>
 	<?php
-	/*write items of each category to file*/
+	//write items of each category to file IF user hits confirm
 
 	?>
-		<!--<table border="1px">
+		<table border="1px">
 		<caption> Your Order </caption>
 		<tr>
 			<th>Item</th>
 			<th>Quantity</th>
 			<th>Price</th>
 		</tr>
-		<?php foreach($cartq as $index=>$item){?>
+		<?php if (array_key_exists('drinks', $_SESSION)) {
+				foreach($_SESSION['drinks'][0] as $item => $quantity){
+		?>
 			<tr>
-				<td><?php echo $itemName?>
-		<?php }?>
-	</table>-->
-	test link
+				<td><?php echo $item?></td>
+				<td><?php echo $quantity?></td>
+			</tr>
+		<?php }}?>
+
+	</table>
 </body>
 </html>
