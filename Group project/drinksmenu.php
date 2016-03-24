@@ -6,31 +6,43 @@
 			$_SESSION['Deer Park']=$_POST['deerpark'];
 		} else {
 				$_SESSION['Deer Park']+= $_POST['deerpark'];
-				}
-		echo $_SESSION['Deer Park'];	
 		}
+	}
 	if (!empty($_POST['canadadry'])){
-			$_SESSION['Canada Dry'] = $canadadry[0];
-			$drinkscart["Canadadry"] = $canadadryQuantity;
-
+		if(!isset($_SESSION['Canada Dry'])){
+			$_SESSION['Canada Dry'] = $_POST['canadadry'];
+		} else {
+			$$_SESSION["Canada Dry"] += $_POST['canadadry'];
 		}
-	/*if (!empty($izze)){
-			$izzeQuantity = $izze[0];
-			$drinkscart["izze"] = $izzeQuantity;
+	}
+	if (!empty($_POST['izze'])){
+		if(!isset($_SESSION['Izze'])){
+			$_SESSION['Izze'] = $_POST['izze'];
+		} else {
+			$_SESSION['Izze'] += $_POST['izze'];
+		}	
+	}		
+	if (!empty($_POST['pepsi'])){
+		if(!isset($_SESSION['Pepsi'])){
+			$_SESSION['Pepsi'] = $_POST['pepsi'];
+		} else {
+			$_SESSION['Pepsi'] += $_POST['pepsi'];
+		}		
+	}
+	if (!empty($_POST['rootbeer'])){
+		if(!isset($_SESSION['Root Beer'])){
+			$_SESSION['Root Beer'] = $_POST['rootbeer'];
+		} else {
+			$_SESSION['Root Beer'] += $_POST['rootbeer'];
 		}
-		
-	if (!empty($pepsi)){
-			$pepsiQuantity = $pepsi[0];
-			$drinkscart["pepsi"] = $pepsiQuantity;
+	}
+	if (!empty($_POST['sprite'])){
+		if(!isset($_SESSION['Sprite'])){
+			$_SESSION['Sprite'] = $_POST['sprite'];
+		} else {
+			$_SESSION['Sprite'] += $_POST['sprite'];
 		}
-	if (!empty($rootbeer)){
-		$rootbeerQuantity = $rootbeer[0];
-			$drinkscart["rootbeer"] = $rootbeerQuantity;
-		}
-	if (!empty($sprite)){
-			$spriteQuantity = $sprite[0];
-			$drinkscart["sprite"] = $spriteQuantity;
-		}*/
+	}
 		
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -184,7 +196,7 @@
 			<td>
 			<form method="POST" action="">
 				<img src="POS design/drinks/sprite.png" alt="Sprite"/><br/>
-				Quantity <select name="Sprite">
+				Quantity <select name="sprite">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>

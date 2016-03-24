@@ -1,5 +1,47 @@
 <?php
 	session_start();
+	if (!empty($_POST['cliffbar'])){
+		if(!isset($_SESSION['Cliffbar'])){
+			$_SESSION['Cliffbar'] = $_POST['cliffbar'];
+		} else {
+			$_SESSIOn['Cliffbar'] += $_POST['cliffbar'];
+		}
+	}
+	if (!empty($_POST['fiberone'])){
+		if(!isset($_SESSION['Fiberone'])){
+			$_SESSION['Fiberone'] = $_POST['fiberone'];
+		} else {
+			$_SESSION['Fiberone'] = $_POST['fiberone'];
+		}
+	}
+	if (!empty($_POST['quakerbar'])){
+		if(!isset($_SESSION['Quaker Bar'])){
+			$_SESSION['Quaker Bar'] = $_POST['quakerbar'];
+		} else {
+			$_SESSION['Quaker Bar'] += $_POST['quakerbar'];
+		}
+	}
+	if (!empty($_POST['kashibar'])){
+		if(!isset($_SESSION['Kashibar'])){
+			$_SESSION['Kashibar'] = $_POST['kashibar'];
+		} else {
+			$_SESSION['Kashibar'] += $_POST['kashibar'];
+		}
+	}
+	if (!empty($_POST['kindbar'])){
+		if(!isset($_SESSION['Kindbar'])){
+			$_SESSION['Kindbar'] = $_POST['kindbar'];
+		} else {
+			$_SESSION['Kindbar'] += $_POST['kindbar'];
+		}
+	}
+	if (!empty($_POST['naturevalley'])){
+		if(!isset($_SESSION['Nature Valley'])){
+			$_SESSION['Nature Valley'] = $_POST['naturevalley'];
+		} else {
+			$_SESSION['Nature Valley'] += $_POST['naturevalley'];
+		}
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

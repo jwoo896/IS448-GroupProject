@@ -1,5 +1,48 @@
 <?php 
 	session_start(); 
+	if (!empty($_POST['cheetos'])){
+		if(!isset($_SESSION['Cheetos'])){
+			$_SESSION['Cheetos'] = $_POST['cheetos'];
+		} else {
+			$_SESSION['Cheetos'] += $_POST['cheetos'];
+		}
+	}
+	if (!empty($_POST['doritos'])){
+		if(!isset($_SESSION['Doritos'])){
+			$_SESSION['Doritos'] = $_POST['doritos'];
+		} else {
+			$_SESSION['Doritos'] =+ $_POST['doritos'];
+		}
+	}
+	if (!empty($_POST['fritos'])){
+		if(!isset($_SESSION['Fritos'])){
+			$_SESSION['Fritos'] = $_POST['fritos'];
+		} else {
+			$_SESSION['Fritos'] += $_POST['fritos'];
+		}
+	}
+	if (!empty($_POST['funyuns'])){
+		if(!isset($_SESSION['Funyuns'])){
+			$_SESSION['Funyuns'] = $_POST['funyuns'];
+		} else {
+			$_SESSION['Funyuns'] += $_POST['funyuns'];
+		}
+	}
+	if (!empty($_POST['lays'])){
+		if(!isset($_SESSION['Lays'])){
+			$_SESSION['Lays'] = $_POST['lays'];
+		} else {
+			$_SESSION['Lays'] += $_POST['lays'];
+		}	
+	}
+	if (!empty($_POST['sunchips'])){
+		if(!isset($_SESSION['Sunchips'])){
+			$_SESSION['Sunchips'] = $_POST['sunchips'];
+		} else {
+			$_SESSION['Sunchips'] = $_POST['sunchips'];
+		}	
+	}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

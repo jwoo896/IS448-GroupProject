@@ -1,5 +1,48 @@
 <?php
 	session_start();
+	if (!empty($_POST['chipsahoy'])){
+		if(!isset($_SESSION['Chips Ahoy'])){
+			$_SESSION['Chips Ahoy'] = $_POST['chipsahoy'];
+		} else {
+			$_SESSION['Chips Ahoy'] += $_POST['chipsahoy'];
+		}
+	}
+	if (!empty($_POST['famousamos'])){
+		if(!isset($_SESSION['Famous Amos'])){
+			$_SESSION['Famous Amos'] = $_POST['famousamos'];
+		} else {
+			$_SESSION['Famous Amos'] += $_POST['famousamos'];
+		}
+	}
+	if (!empty($_POST['nillawafers'])){
+		if(!isset($_SESSION['Nilla Wafers'])){
+			$_SESSION['Nilla Wafers'] = $_POST['nillawafers'];
+		} else {
+			$_SESSION['Nilla Wafers'] += $_POST['nillawafers'];
+		}
+	}
+	if (!empty($_POST['nutterbutter'])){
+		if(!isset($_SESSION['Nutter Butters'])){
+			$_SESSION['Nutter Butters'] = $_POST['nutterbutter'];
+		} else {
+			$_SESSION['Nutter Butters'] += $_POST['nutterbutter'];
+		}
+	}
+	if (!empty($_POST['nuttybars'])){
+		if(!isset($_SESSION['Nutty Bars'])){
+			$_SESSION['Nutty Bars'] = $_POST['nuttybars'];
+		} else {
+			$_SESSION['Nutty Bars'] += $_POST['nuttybars'];
+		}
+	}
+	if (!empty($_POST['oreo'])){
+		if(!isset($_SESSION['Oreos'])){
+			$_SESSION['Oreos'] = $_POST['oreo'];
+		} else {
+			$_SESSION['Oreos'] += $_POST['oreo'];
+		}
+	}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

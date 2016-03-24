@@ -1,5 +1,47 @@
 <?php
 	session_start();
+	if (!empty($_POST['apple'])){
+		if(!isset($_SESSION['Apple'])){
+			$_SESSION['Apple'] = $_POST['apple'];
+		} else {
+			$_SESSION['Apple'] += $_POST['apple'];
+		}
+	}
+	if (!empty($_POST['banana'])){
+		if(!isset($_SESSION['Banana'])){
+			$_SESSION['Banana'] = $_POST['banana'];
+		} else {
+			$_SESSION['Banana'] += $_POST['banana'];
+		}
+	}
+	if (!empty($_POST['kiwi'])){
+		if(!isset($_SESSION['Kiwi'])){
+			$_SESSION['Kiwi'] = $_POST['kiwi'];
+		} else {
+			$_SESSION['Kiwi'] += $_POST['kiwi'];
+		}
+	}
+	if (!empty($_POST['orange'])){
+		if(!isset($_SESSION['Orange'])){
+			$_SESSION['Orange'] = $_POST['orange'];
+		} else {
+			$_SESSION['Orange'] += $_POST['orange'];
+		}
+	}
+	if (!empty($_POST['peach'])){
+		if(!isset($_SESSION['Peach'])){
+			$_SESSION['Peach'] = $_POST['peach'];
+		} else {
+			$_SESSION['Peach'] += $_POST['peach'];
+		}
+	}
+	if (!empty($_POST['pear'])){
+		if(!isset($_SESSION['Pear'])){
+			$_SESSION['Pear'] = $_POST['pear'];
+		} else {
+			$_SESSION['Pear'] += $_POST['pear'];
+		}
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

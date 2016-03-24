@@ -9,6 +9,20 @@
 	<script type="text/javascript" src="POS.js"></script>
 </head>
 <body>
+	<?php
+		$totalUp = 0;
+		function calc($type,$quantity){
+			if($type = 'Deer Park' || $type = 'Canada Dry' || $type = 'Izze'
+				|| $type = 'Pepsi' || $type = 'Root Beer' || $type = 'Sprite'){
+				$iPrice = $quantity * .5;
+				return $iPrice;
+			}
+		function totalUp($p){
+			global $totalUp += $p;
+			return $totalup;
+		}
+		}
+	?>
 	<div id="divWrapper">
 	<div id="divImageHead">
 		<p>
@@ -44,12 +58,18 @@
 			<th>Price</th>
 		</tr>
 		<?php foreach($_SESSION as $item => $quantity){
+			if ($item != 'auth'){
 		?>
 			<tr>
 				<td><?php echo $item?></td>
 				<td><?php echo $quantity?></td>
+				<td><?php $price = calc($item, $quantity); echo $price;?></td>
 			</tr>
-		<?php }?>
+		<?php }}?>
+		<tr>
+			<th align= 'center' colspan='2'>Total</th>
+			<td><?php  echo $totalUp?></td>
+		</tr>
 
 	</table>
 </body>
