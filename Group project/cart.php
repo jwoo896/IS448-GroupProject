@@ -21,7 +21,7 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-			<li><a href="CategoriesPage.html">Categories</a></li>
+			<li><a href="CategoriesPage.php">Categories</a></li>
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
@@ -43,14 +43,13 @@
 			<th>Quantity</th>
 			<th>Price</th>
 		</tr>
-		<?php if (array_key_exists('drinks', $_SESSION)) {
-				foreach($_SESSION['drinks'][0] as $item => $quantity){
+		<?php foreach($_SESSION as $item => $quantity){
 		?>
 			<tr>
 				<td><?php echo $item?></td>
 				<td><?php echo $quantity?></td>
 			</tr>
-		<?php }}?>
+		<?php }?>
 
 	</table>
 </body>

@@ -11,7 +11,7 @@
 <body>
 	<?php
 		//drinks menu items
-		$deerpark = $_POST['deerpark'];
+		//$deerpark = $_POST['deerpark'];
 		$canadadry = $_POST['canadadry'];
 		$izze = $_POST['izze'];
 		$pepsi = $_POST['pepsi'];
@@ -64,10 +64,9 @@
 		//$itemNames=array();
 
 		//drinkscart generation
-		if (!empty($deerpark)){
-			$deerparkQuantity = $deerpark[0];
-			$drinkscart["deerpark"] = $deerparkQuantity;
-			$_SESSION['drinks']=$drinkscart;
+		if (!empty($_POST['deerpark'])){
+			$_SESSION['deerpark']=$_POST['deerpark'];
+			
 		}
 		if (!empty($canadadry)){
 			$canadadryQuantity = $canadadry[0];
