@@ -17,10 +17,12 @@
 				$iPrice = $quantity * .5;
 				return $iPrice;
 			}
-		function totalUp($p){
-			global $totalUp += $p;
-			return $totalup;
+			//if
 		}
+		function totalUp($p){
+			global $totalUp;
+			$totalUp += $p;
+			
 		}
 	?>
 	<div id="divWrapper">
@@ -63,7 +65,7 @@
 			<tr>
 				<td><?php echo $item?></td>
 				<td><?php echo $quantity?></td>
-				<td><?php $price = calc($item, $quantity); echo $price;?></td>
+				<td><?php $price = calc($item, $quantity); totalUp($price); echo $price;?></td>
 			</tr>
 		<?php }}?>
 		<tr>
