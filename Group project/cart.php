@@ -12,12 +12,25 @@
 	<?php
 		$totalUp = 0;
 		function calc($type,$quantity){
-			if($type = 'Deer Park' || $type = 'Canada Dry' || $type = 'Izze'
-				|| $type = 'Pepsi' || $type = 'Root Beer' || $type = 'Sprite'){
+			if($type = 'Canada Dry' || $type = 'Izze' || $type = 'Pepsi' 
+				|| $type = 'Root Beer' || $type = 'Sprite' 
+				|| $type = 'Doritos' || $type = 'Funyuns' || $type = 'Kiwi'
+				|| $type = 'Orange' || $type = 'Peach' || $type = "Pear"
+				|| $type = 'Chips Ahoy' || $type = 'Famous Amos' || $type = 'Nilla Wafers'
+				|| $type = 'Oreos'){
+				$iPrice = $quantity * .75;
+				return $iPrice;
+			}
+			if($type = 'Deer Park' || $type = 'Cheetos' || $type = 'Fritos' 
+				|| $type = 'Lays' || $type = 'Sunchips' || $type = 'Apple' 
+				|| $type = 'Banana' || $type = 'Nutter Butters' || $type = 'Nutty Bars'){
 				$iPrice = $quantity * .5;
 				return $iPrice;
 			}
-			//if
+			if($type = 'Chobani' || $type = 'Dannon'){
+				$iPrice = $quantity * 1;
+				return $iPrice;
+			}
 		}
 		function totalUp($p){
 			global $totalUp;
@@ -45,9 +58,6 @@
 		</div>
 	</div>
 	
-	<p>
-	<hr/>
-	</p>
 	<?php
 	//write items of each category to file IF user hits confirm
 
