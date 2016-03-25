@@ -98,7 +98,7 @@
 				 	<input type="submit" value="Add"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 				 	<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
+				 		<input type="submit" value="Request More"/>
 				 	</form>
 			</form>
 			</td>
@@ -217,6 +217,7 @@
 			</td>
 		</tr>
 	</table>
+</div>
 </div>
 </body>
 </html>

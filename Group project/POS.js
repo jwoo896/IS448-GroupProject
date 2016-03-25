@@ -22,3 +22,13 @@ window.onclick = function(event){
 		
 	}
 }
+
+var modalConfirm = document.getElementById('confirmationModal');
+var confirmBtn = document.getElementById('confirmBtn');
+//var modalConfirmBtn = docuement.getElementsById('modalConfirmBtn');
+confirmBtn.onclick = function(){
+	modalConfirm.style.display = "block";
+}
+function closeModal(){
+	modalConfirm.style.display = 'none';	
+}

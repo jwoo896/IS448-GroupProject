@@ -1,48 +1,47 @@
-<?php 
-	session_start(); 
-	if (!empty($_POST['cheetos'])){
-		if(!isset($_SESSION['Cheetos'])){
-			$_SESSION['Cheetos'] = $_POST['cheetos'];
+<?php
+	session_start();
+	if (!empty($_POST['apple'])){
+		if(!isset($_SESSION['Apple'])){
+			$_SESSION['Apple'] = $_POST['apple'];
 		} else {
-			$_SESSION['Cheetos'] += $_POST['cheetos'];
+			$_SESSION['Apple'] += $_POST['apple'];
 		}
 	}
-	if (!empty($_POST['doritos'])){
-		if(!isset($_SESSION['Doritos'])){
-			$_SESSION['Doritos'] = $_POST['doritos'];
+	if (!empty($_POST['banana'])){
+		if(!isset($_SESSION['Banana'])){
+			$_SESSION['Banana'] = $_POST['banana'];
 		} else {
-			$_SESSION['Doritos'] =+ $_POST['doritos'];
+			$_SESSION['Banana'] += $_POST['banana'];
 		}
 	}
-	if (!empty($_POST['fritos'])){
-		if(!isset($_SESSION['Fritos'])){
-			$_SESSION['Fritos'] = $_POST['fritos'];
+	if (!empty($_POST['kiwi'])){
+		if(!isset($_SESSION['Kiwi'])){
+			$_SESSION['Kiwi'] = $_POST['kiwi'];
 		} else {
-			$_SESSION['Fritos'] += $_POST['fritos'];
+			$_SESSION['Kiwi'] += $_POST['kiwi'];
 		}
 	}
-	if (!empty($_POST['funyuns'])){
-		if(!isset($_SESSION['Funyuns'])){
-			$_SESSION['Funyuns'] = $_POST['funyuns'];
+	if (!empty($_POST['orange'])){
+		if(!isset($_SESSION['Orange'])){
+			$_SESSION['Orange'] = $_POST['orange'];
 		} else {
-			$_SESSION['Funyuns'] += $_POST['funyuns'];
+			$_SESSION['Orange'] += $_POST['orange'];
 		}
 	}
-	if (!empty($_POST['lays'])){
-		if(!isset($_SESSION['Lays'])){
-			$_SESSION['Lays'] = $_POST['lays'];
+	if (!empty($_POST['peach'])){
+		if(!isset($_SESSION['Peach'])){
+			$_SESSION['Peach'] = $_POST['peach'];
 		} else {
-			$_SESSION['Lays'] += $_POST['lays'];
-		}	
+			$_SESSION['Peach'] += $_POST['peach'];
+		}
 	}
-	if (!empty($_POST['sunchips'])){
-		if(!isset($_SESSION['Sunchips'])){
-			$_SESSION['Sunchips'] = $_POST['sunchips'];
+	if (!empty($_POST['pear'])){
+		if(!isset($_SESSION['Pear'])){
+			$_SESSION['Pear'] = $_POST['pear'];
 		} else {
-			$_SESSION['Sunchips'] = $_POST['sunchips'];
-		}	
+			$_SESSION['Pear'] += $_POST['pear'];
+		}
 	}
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -71,13 +70,14 @@
 			</div>
 		</div>
 	</div>
+
 	<div id="divBody">
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/cheetos.png" alt="Cheetos"/><br/>
-				Quantity <select name="cheetos">
+			<form method="POST" action="fruitscart.php">
+				<img src="POS design/fruits/apple.jpg" alt="Apple"/><br/>
+				Quantity <select name="apple">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -99,9 +99,9 @@
 			</td>
 
 			<td>
-			<form method="POST" action="chips.cart.php">
-				<img src="POS design/chips/doritos.png" alt="Doritos"/><br/>
-				Quantity <select name="doritos">
+			<form method="POST" action="frutscarts.php">
+				<img src="POS design/fruits/banana.jpg" alt="Banana"/><br/>
+				Quantity <select name="banana">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -121,9 +121,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/fritos.jpg" alt="Fritos"/><br/>
-				Quantity <select name="fritos">
+			<form method="POST" action="fruitscart.php">
+				<img src="POS design/fruits/kiwi.jpg" alt="Kiwi"/><br/>
+				Quantity <select name="kiwi">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -137,7 +137,7 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest">
+					<form method="$_POST" action="restockRequest.php">
 				 		<input type="submit" value="Request more"/>
 				 	</form>
 			</form>
@@ -145,9 +145,9 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/funyuns.png" alt="Funyuns"/><br/>
-				Quantity <select name="funyuns">
+			<form method="POST" action="fruitscart.php">
+				<img src="POS design/fruits/orange.jpeg" alt="Orange"/><br/>
+				Quantity <select name="orange">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -167,9 +167,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/lays.jpg" alt="Lays"/><br/>
-				Quantity <select name="lays">
+			<form method="POST" action="fruitscart.php">
+				<img src="POS design/fruits/peach.png" alt="Peach"/><br/>
+				Quantity <select name="peach">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -189,9 +189,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/sunchips.gif" alt="Sunchips"/><br/>
-				Quantity <select name="sunchips">
+			<form method="POST" action="fruitscart.php">
+				<img src="POS design/fruits/pear.jpg" alt="Pear"/><br/>
+				Quantity <select name="pear">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>

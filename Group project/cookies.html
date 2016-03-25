@@ -1,46 +1,46 @@
-<?php 
-	session_start(); 
-	if (!empty($_POST['cheetos'])){
-		if(!isset($_SESSION['Cheetos'])){
-			$_SESSION['Cheetos'] = $_POST['cheetos'];
+<?php
+	session_start();
+	if (!empty($_POST['chipsahoy'])){
+		if(!isset($_SESSION['Chips Ahoy'])){
+			$_SESSION['Chips Ahoy'] = $_POST['chipsahoy'];
 		} else {
-			$_SESSION['Cheetos'] += $_POST['cheetos'];
+			$_SESSION['Chips Ahoy'] += $_POST['chipsahoy'];
 		}
 	}
-	if (!empty($_POST['doritos'])){
-		if(!isset($_SESSION['Doritos'])){
-			$_SESSION['Doritos'] = $_POST['doritos'];
+	if (!empty($_POST['famousamos'])){
+		if(!isset($_SESSION['Famous Amos'])){
+			$_SESSION['Famous Amos'] = $_POST['famousamos'];
 		} else {
-			$_SESSION['Doritos'] =+ $_POST['doritos'];
+			$_SESSION['Famous Amos'] += $_POST['famousamos'];
 		}
 	}
-	if (!empty($_POST['fritos'])){
-		if(!isset($_SESSION['Fritos'])){
-			$_SESSION['Fritos'] = $_POST['fritos'];
+	if (!empty($_POST['nillawafers'])){
+		if(!isset($_SESSION['Nilla Wafers'])){
+			$_SESSION['Nilla Wafers'] = $_POST['nillawafers'];
 		} else {
-			$_SESSION['Fritos'] += $_POST['fritos'];
+			$_SESSION['Nilla Wafers'] += $_POST['nillawafers'];
 		}
 	}
-	if (!empty($_POST['funyuns'])){
-		if(!isset($_SESSION['Funyuns'])){
-			$_SESSION['Funyuns'] = $_POST['funyuns'];
+	if (!empty($_POST['nutterbutter'])){
+		if(!isset($_SESSION['Nutter Butters'])){
+			$_SESSION['Nutter Butters'] = $_POST['nutterbutter'];
 		} else {
-			$_SESSION['Funyuns'] += $_POST['funyuns'];
+			$_SESSION['Nutter Butters'] += $_POST['nutterbutter'];
 		}
 	}
-	if (!empty($_POST['lays'])){
-		if(!isset($_SESSION['Lays'])){
-			$_SESSION['Lays'] = $_POST['lays'];
+	if (!empty($_POST['nuttybars'])){
+		if(!isset($_SESSION['Nutty Bars'])){
+			$_SESSION['Nutty Bars'] = $_POST['nuttybars'];
 		} else {
-			$_SESSION['Lays'] += $_POST['lays'];
-		}	
+			$_SESSION['Nutty Bars'] += $_POST['nuttybars'];
+		}
 	}
-	if (!empty($_POST['sunchips'])){
-		if(!isset($_SESSION['Sunchips'])){
-			$_SESSION['Sunchips'] = $_POST['sunchips'];
+	if (!empty($_POST['oreo'])){
+		if(!isset($_SESSION['Oreos'])){
+			$_SESSION['Oreos'] = $_POST['oreo'];
 		} else {
-			$_SESSION['Sunchips'] = $_POST['sunchips'];
-		}	
+			$_SESSION['Oreos'] += $_POST['oreo'];
+		}
 	}
 
 ?>
@@ -75,9 +75,9 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/cheetos.png" alt="Cheetos"/><br/>
-				Quantity <select name="cheetos">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/chipsahoy.jpg" alt="Chips Ahoy"/><br/>
+				Quantity <select name="chipsahoy">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -99,9 +99,9 @@
 			</td>
 
 			<td>
-			<form method="POST" action="chips.cart.php">
-				<img src="POS design/chips/doritos.png" alt="Doritos"/><br/>
-				Quantity <select name="doritos">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/famousamos.jpeg" alt="Famous Amos"/><br/>
+				Quantity <select name="famousamos">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -121,9 +121,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/fritos.jpg" alt="Fritos"/><br/>
-				Quantity <select name="fritos">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/nillawafers.jpg" alt="Nilla Wafers"/><br/>
+				Quantity <select name="nillawafers">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -137,7 +137,7 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest">
+					<form method="$_POST" action="restockRequest.php">
 				 		<input type="submit" value="Request more"/>
 				 	</form>
 			</form>
@@ -145,9 +145,9 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/funyuns.png" alt="Funyuns"/><br/>
-				Quantity <select name="funyuns">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/nutterbutter.jpg" alt="Nutter Butter"/><br/>
+				Quantity <select name="nutterbutter">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -167,9 +167,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/lays.jpg" alt="Lays"/><br/>
-				Quantity <select name="lays">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/nuttybars.jpg" alt="Nutty Bars"/><br/>
+				Quantity <select name="nuttybars">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -189,9 +189,9 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
-				<img src="POS design/chips/sunchips.gif" alt="Sunchips"/><br/>
-				Quantity <select name="sunchips">
+			<form method="POST" action="cookiescart.php">
+				<img src="POS design/cookies/oreos.jpg" alt="Oreo"/><br/>
+				Quantity <select name="oreo">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>

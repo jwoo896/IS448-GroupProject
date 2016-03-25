@@ -57,32 +57,77 @@
 		</ul>
 		</div>
 	</div>
-	
-	<?php
-	//write items of each category to file IF user hits confirm
-
-	?>
+	<div id="divBody">
 		<table border="1px">
-		<caption> Your Order </caption>
-		<tr>
-			<th>Item</th>
-			<th>Quantity</th>
-			<th>Price</th>
-		</tr>
+			<caption> Your Order </caption>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Price</th>
+			</tr>
 		<?php foreach($_SESSION as $item => $quantity){
-			if ($item != 'auth'){
+			if ($item != 'User' && $item != 'auth'){
 		?>
 			<tr>
 				<td><?php echo $item?></td>
 				<td><?php echo $quantity?></td>
 				<td><?php $price = calc($item, $quantity); totalUp($price); echo $price;?></td>
 			</tr>
-		<?php }}?>
-		<tr>
-			<th align= 'center' colspan='2'>Total</th>
-			<td><?php  echo $totalUp?></td>
-		</tr>
+			<?php }}?>
+			<tr>
+				<th align= 'center' colspan='2'>Total</th>
+				<td><?php  echo $totalUp?></td>
+			</tr>
+		</table>
 
-	</table>
+	<?php
+	//write items of each category to file IF user hits confirm
+	function writeToFile(){
+		$receiptvar = fopen('/afs/umbc.edu/users/j/jwoo2/pub/php-files/receipts.txt', 'a+') or die ('Could not find file');
+		flock($receiptvar, LOCK_EX);
+		foreach($_SESSION as $item => $quantity){
+			if ($item != 'auth'){
+				fwrite($receiptvar, $item);
+				fwrite($receiptvar, $quantity);
+				$price = calc($item, $quantity);
+				fwrite($receiptvar, $price);
+				totalUp($price);
+				fwrite($receiptvar, $price);
+			}
+		flock($receiptvar, LOCK_UN);
+		fclose($receiptvar);
+		}
+		echo "<script>closeModal()</script>";
+	}	
+
+	?>
+	<button id = 'confirmBtn' class = 'modal-submit'>Confirm</button>
+	
+	<div id = 'confirmationModal' class = 'modal'>
+		<div class = 'modal-content'>
+			<div class = 'modal-body'>
+				<table border='1px'>
+					<tr>
+						<th>Sub-total<th>
+						<td><?php echo $price?></td>
+					</tr>
+					<tr>
+						<th>Tax</th>
+						<td><?php $tax = $price * .06; echo $tax?></td>
+					</tr>
+					<tr>
+						<th>Total</th>
+						<td><?php $totalPrice = $price + $tax; echo $totalPrice?></td>
+					</tr>
+				</table>
+				<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'writeToFile()'>Confirm</button>
+			</div>	
+			<!--<form class = 'modal-submit' method = "POST" action = "">
+				<input type = 'submit' name='submitForm' value = 'Submit'/>
+			</form>-->
+		</div>
+	</div>
+</div>
+</div>
 </body>
 </html>

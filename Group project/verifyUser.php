@@ -13,27 +13,31 @@
 
 		$conn = connect();
 
-		$result = mysql_fetch_array(mysql_query("SELECT pin, permissions FROM user_login WHERE pin = $pin"));
-		 
+		$result = mysql_fetch_array(mysql_query("SELECT first_name, last_name, pin, permissions FROM user_login WHERE pin = $pin"));
+		
+		$userName = $result['first_name'] . " " . $result['last_name'];
+
+		$_SESSION['User'] = $userName;
+
 		$permission = $result["permissions"];
 
 		switch($permission){
 			case "administrator":
 				//Will be replaced with admin page redirect
 				$_SESSION["auth"] = true;
-				header("Location:admin.php");
+				header("Location:categoriesPage.php");
 				break;
 
 			case "guest":
 				//Will be replaced with guest page redirect
 				$_SESSION["auth"] = true;
-				header("Location:CategoriesPage.php");
+				header("Location:categoriesPage.php");
 				break;
 
 			case "accountant":
 				//Will be replaced with accountant page redirect
 				$_SESSION["auth"] = true;
-				header("Location:accountant.php");
+				header("Location:categoriesPage.php");
 				break;
 			default:
 				echo("invalid credentials");
