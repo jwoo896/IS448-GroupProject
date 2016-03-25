@@ -39,50 +39,49 @@
 		}
 	?>
 	<div id="divWrapper">
-	<div id="divImageHead">
-		<p>
-			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-		</p>
-	</div>
+		<div id="divImageHead">
+			<p>
+				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
+			</p>
+		</div>
 	
 	
 	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
-	<div id="divMenu">
-		<div id="menuPosition">
-		<ul>
-			<li><a href="categoriesPage.php">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="logout.php">Logout</a></li>
-		<li><a href="cart.php">Cart</a></li>
-		</ul>
+		<div id="divMenu">
+			<div id="menuPosition">
+				<ul>
+					<li><a href="categoriesPage.php">Categories</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="logout.php">Logout</a></li>
+					<li><a href="cart.php">Cart</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div id="divBody">
-		<table border="1px">
-			<caption> Your Order </caption>
-			<tr>
-				<th>Item</th>
-				<th>Quantity</th>
-				<th>Price</th>
-			</tr>
-		<?php foreach($_SESSION as $item => $quantity){
-			if ($item != 'User' && $item != 'auth'){
-		?>
-			<tr>
-				<td><?php echo $item?></td>
-				<td><?php echo $quantity?></td>
-				<td><?php $price = calc($item, $quantity); totalUp($price); echo $price;?></td>
-			</tr>
-			<?php }}?>
-			<tr>
-				<th align= 'center' colspan='2'>Total</th>
-				<td><?php  echo $totalUp?></td>
-			</tr>
-		</table>
+		<div id="divBody">
+			<table border="1px">
+				<caption> Your Order </caption>
+				<tr>
+					<th>Item</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+				<?php foreach($_SESSION as $item => $quantity){
+				if ($item != 'User' && $item != 'auth'){?>
+				<tr>
+					<td><?php echo $item?></td>
+					<td><?php echo $quantity?></td>
+					<td><?php $price = calc($item, $quantity); totalUp($price); echo $price;?></td>
+				</tr>
+				<?php }}?>
+				<tr>
+					<th align= 'center' colspan='2'>Total</th>
+					<td><?php  echo $totalUp?></td>
+				</tr>
+			</table>
 
-	<?php
+			<?php
 	//write items of each category to file IF user hits confirm
-	function writeToFile(){
+	/*function writeToFile(){
 		$receiptvar = fopen('/afs/umbc.edu/users/j/jwoo2/pub/php-files/receipts.txt', 'a+') or die ('Could not find file');
 		flock($receiptvar, LOCK_EX);
 		foreach($_SESSION as $item => $quantity){
@@ -98,36 +97,36 @@
 		fclose($receiptvar);
 		}
 		echo "<script>closeModal()</script>";
-	}	
+	}	*/
 
-	?>
-	<button id = 'confirmBtn' class = 'modal-submit'>Confirm</button>
+			?>
+			<button id = 'confirmBtn' class = 'modal-submit' onclick = "showModal()">Confirm</button>
 	
-	<div id = 'confirmationModal' class = 'modal'>
-		<div class = 'modal-content'>
-			<div class = 'modal-body'>
-				<table border='1px'>
-					<tr>
-						<th>Sub-total<th>
-						<td><?php echo $price?></td>
-					</tr>
-					<tr>
-						<th>Tax</th>
-						<td><?php $tax = $price * .06; echo $tax?></td>
-					</tr>
-					<tr>
-						<th>Total</th>
-						<td><?php $totalPrice = $price + $tax; echo $totalPrice?></td>
-					</tr>
-				</table>
-				<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'writeToFile()'>Confirm</button>
-			</div>	
+			<div id = 'confirmationModal' class = 'modalHide'>
+				<div class = 'modal-content'>
+					<div class = 'modal-body'>
+						<table border='1px'>
+							<tr>
+								<th>Sub-total<th>
+								<td><?php echo $price?></td>
+							</tr>
+							<tr>
+								<th>Tax</th>
+								<td><?php $tax = $price * .06; echo $tax?></td>
+							</tr>
+							<tr>
+								<th>Total</th>
+								<td><?php $totalPrice = $price + $tax; echo $totalPrice?></td>
+							</tr>
+						</table>
+						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'closeModal()'>Confirm</button>
+					</div>	
 			<!--<form class = 'modal-submit' method = "POST" action = "">
 				<input type = 'submit' name='submitForm' value = 'Submit'/>
 			</form>-->
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-</div>
 </body>
 </html>

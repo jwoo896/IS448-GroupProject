@@ -23,12 +23,10 @@ window.onclick = function(event){
 	}
 }
 
-var modalConfirm = document.getElementById('confirmationModal');
-var confirmBtn = document.getElementById('confirmBtn');
-//var modalConfirmBtn = docuement.getElementsById('modalConfirmBtn');
-confirmBtn.onclick = function(){
-	modalConfirm.style.display = "block";
+
+function showModal(){
+	document.getElementById('confirmationModal').className = 'modalShow';
 }
 function closeModal(){
-	modalConfirm.style.display = 'none';	
+	document.getElementById('confirmationModal').className = 'modalHide';	
 }
