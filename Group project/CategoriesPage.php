@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	
 	switch($permission){
 		case "administrator":
 		//show appropriate additional privileges

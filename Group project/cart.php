@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('finalize.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -66,7 +67,7 @@
 					<th>Price</th>
 				</tr>
 				<?php foreach($_SESSION as $item => $quantity){
-				if ($item != 'User' && $item != 'auth'){?>
+				if (/*$item != 'User' &&*/ $item != 'auth'){?>
 				<tr>
 					<td><?php echo $item?></td>
 					<td><?php echo $quantity?></td>
@@ -79,27 +80,6 @@
 				</tr>
 			</table>
 
-			<?php
-	//write items of each category to file IF user hits confirm
-	/*function writeToFile(){
-		$receiptvar = fopen('/afs/umbc.edu/users/j/jwoo2/pub/php-files/receipts.txt', 'a+') or die ('Could not find file');
-		flock($receiptvar, LOCK_EX);
-		foreach($_SESSION as $item => $quantity){
-			if ($item != 'auth'){
-				fwrite($receiptvar, $item);
-				fwrite($receiptvar, $quantity);
-				$price = calc($item, $quantity);
-				fwrite($receiptvar, $price);
-				totalUp($price);
-				fwrite($receiptvar, $price);
-			}
-		flock($receiptvar, LOCK_UN);
-		fclose($receiptvar);
-		}
-		echo "<script>closeModal()</script>";
-	}	*/
-
-			?>
 			<button id = 'confirmBtn' class = 'modal-submit' onclick = "showModal()">Confirm</button>
 	
 			<div id = 'confirmationModal' class = 'modalHide'>
@@ -119,7 +99,8 @@
 								<td><?php $totalPrice = $price + $tax; echo $totalPrice?></td>
 							</tr>
 						</table>
-						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'closeModal()'>Confirm</button>
+						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
+						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'closeModal(); finalize();' value = 'finalize'>Confirm</button>
 					</div>	
 			<!--<form class = 'modal-submit' method = "POST" action = "">
 				<input type = 'submit' name='submitForm' value = 'Submit'/>

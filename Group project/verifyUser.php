@@ -13,12 +13,12 @@
 
 		$conn = connect();
 
-		$result = mysql_fetch_array(mysql_query("SELECT first_name, last_name, pin, permissions FROM user_login WHERE pin = $pin"));
+		$result = mysql_fetch_array(mysql_query("SELECT pin, permissions, first_name, last_name FROM user_login WHERE pin = $pin"));
 		
-		$userName = $result['first_name'] . " " . $result['last_name'];
-
-		$_SESSION['User'] = $userName;
-
+		$fname = $result['first_name'];
+		$lname = $result['last_name'];
+		$userName = $fname . " " . $lname;
+	
 		$permission = $result["permissions"];
 
 		switch($permission){
@@ -31,7 +31,9 @@
 			case "guest":
 				//Will be replaced with guest page redirect
 				$_SESSION["auth"] = true;
+				$_SESSION['User'] = $userName;	
 				header("Location:categoriesPage.php");
+
 				break;
 
 			case "accountant":
