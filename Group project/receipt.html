@@ -18,10 +18,10 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-			<li><a href="CategoriesPage.html">Categories</a></li>
+		<li><a href="CategoriesPage.html">Categories</a></li>
 		<li><a href="contact.html">Contact</a></li>
-		<li><a href="logout.php">Logout</a></li>
-		<li><a href="checkout.html">Cart</a></li>
+		<li><a href="">Logout</a></li>
+		<li><a href="cart.php">Cart</a></li>
 		</ul>
 		</div>
 	</div>
@@ -40,24 +40,22 @@
 				<th>Receipt ID</th>
 				<th>Date of Generation</th>
 			</tr>
-			<tr>
-				<td>12345</td>
-				<td>Jae Woo</td>
-				<td>23456</td>
-				<td>2/10/16</td>
-			</tr>
-			<tr>
-				<td>12346</td>
-				<td>Josh Standiford</td>
-				<td>23457</td>
-				<td>1/18/16</td>
-			</tr>
-			<tr>
-				<td>12347</td>
-				<td>Brandon Tesar</td>
-				<td>23458</td>
-				<td>2/13/16</td>
-			</tr>
+		<?php
+		$receipts = fopen("receipts.txt", "r") or die("Unable to open file!");
+		while(!feof($receipts)) {
+			$receiptline = fgets($receipts);
+			$entries = explode(" ", $receiptline);
+			echo "<tr>";
+			echo "<td>".$entries[0]."</td>";
+			echo "<td>".$entries[1].$entries[2]."</td>";
+			echo "<td>".$entries[3]."</td>";
+			echo "<td>".$entries[4]."</td>";
+			echo "</tr>";
+		}
+		fclose($receipts);
+		
+		 
+		?>
 			<tr style="background-color:white;">
 				<td></td>
 				<td></td>
