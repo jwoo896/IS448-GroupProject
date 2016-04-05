@@ -20,7 +20,7 @@
 		$userName = $fname . " " . $lname;
 	
 		$permission = $result["permissions"];
-
+		$_SESSION["permission"] = $permission;
 		switch($permission){
 			case "administrator":
 				//Will be replaced with admin page redirect
