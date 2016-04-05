@@ -51,7 +51,7 @@
 				</tr>
 				<tr>
 					<td><a href="fruitsmenu.php"><img src="POS design/fruits.png" alt="Fruits image"/></a></td>
-					<td><a href="cookiesmenu.php"><img src="POS design/cookies.jpeg" alt="Cookies image"/></a></td>
+					<td><a href="cookies.php"><img src="POS design/cookies.jpeg" alt="Cookies image"/></a></td>
 					<td><a href="yogurtmenu.php"><img src="POS design/yogurt.png" alt="Yogurt image"/></a></td>
 				</tr>
 			</table>

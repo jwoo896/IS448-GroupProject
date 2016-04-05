@@ -31,14 +31,7 @@ function closeModal(){
 	document.getElementById('confirmationModal').className = 'modalHide';	
 }
 
-function finalize(){
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-		var param = document.getElementById('finalize');
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			document.getElementById('divBody').innerHTML = xmlhttp.responseText;
-		}
-		xmlhttp.open("POST", "finalize.php?p=" + param, true);
-		xmlhttp.send();
-	}
+function finalize(newLocation){
+	window.location = newLocation;
+	return false;
 }

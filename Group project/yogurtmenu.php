@@ -46,7 +46,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="yogurtcart.php">
+			<form method="POST" action="">
 				<img src="POS design/yogurt/chobani.png" alt="Chobani"/><br/>
 				Quantity <select name="chobani">
 							<option>0</option>
@@ -70,7 +70,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="yogurtcart.php">
+			<form method="POST" action="">
 				<img src="POS design/yogurt/dannon.png" alt="Dannon"/><br/>
 				Quantity <select name="dannon">
 							<option>0</option>

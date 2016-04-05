@@ -75,7 +75,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/cheetos.png" alt="Cheetos"/><br/>
 				Quantity <select name="cheetos">
 							<option>0</option>
@@ -99,7 +99,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="chips.cart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/doritos.png" alt="Doritos"/><br/>
 				Quantity <select name="doritos">
 							<option>0</option>
@@ -121,7 +121,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/fritos.jpg" alt="Fritos"/><br/>
 				Quantity <select name="fritos">
 							<option>0</option>
@@ -145,7 +145,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="chipscart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/funyuns.png" alt="Funyuns"/><br/>
 				Quantity <select name="funyuns">
 							<option>0</option>
@@ -167,7 +167,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/lays.jpg" alt="Lays"/><br/>
 				Quantity <select name="lays">
 							<option>0</option>
@@ -189,7 +189,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="chipscart.php">
+			<form method="POST" action="">
 				<img src="POS design/chips/sunchips.gif" alt="Sunchips"/><br/>
 				Quantity <select name="sunchips">
 							<option>0</option>

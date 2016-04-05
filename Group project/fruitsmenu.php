@@ -75,7 +75,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="fruitscart.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/apple.jpg" alt="Apple"/><br/>
 				Quantity <select name="apple">
 							<option>0</option>
@@ -99,7 +99,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="frutscarts.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/banana.jpg" alt="Banana"/><br/>
 				Quantity <select name="banana">
 							<option>0</option>
@@ -121,7 +121,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="fruitscart.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/kiwi.jpg" alt="Kiwi"/><br/>
 				Quantity <select name="kiwi">
 							<option>0</option>
@@ -145,7 +145,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="fruitscart.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/orange.jpeg" alt="Orange"/><br/>
 				Quantity <select name="orange">
 							<option>0</option>
@@ -167,7 +167,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="fruitscart.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/peach.png" alt="Peach"/><br/>
 				Quantity <select name="peach">
 							<option>0</option>
@@ -189,7 +189,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="fruitscart.php">
+			<form method="POST" action="">
 				<img src="POS design/fruits/pear.jpg" alt="Pear"/><br/>
 				Quantity <select name="pear">
 							<option>0</option>

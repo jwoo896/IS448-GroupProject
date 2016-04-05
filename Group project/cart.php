@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	require_once('finalize.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -67,16 +66,16 @@
 					<th>Price</th>
 				</tr>
 				<?php foreach($_SESSION as $item => $quantity){
-				if (/*$item != 'User' &&*/ $item != 'auth'){?>
+				if ($item != 'User' && $item != 'auth' && $item != 'pin'){?>
 				<tr>
 					<td><?php echo $item?></td>
 					<td><?php echo $quantity?></td>
-					<td><?php $price = calc($item, $quantity); totalUp($price); echo $price;?></td>
+					<td><?php $price = calc($item, $quantity); echo $price;?></td>
 				</tr>
-				<?php }}?>
+				<?php }totalUp($price);}?>
 				<tr>
 					<th align= 'center' colspan='2'>Total</th>
-					<td><?php  echo $totalUp?></td>
+					<td><?php echo $totalUp?></td>
 				</tr>
 			</table>
 
@@ -100,7 +99,7 @@
 							</tr>
 						</table>
 						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
-						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'closeModal(); finalize();' value = 'finalize'>Confirm</button>
+						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'location.href="finalize.php"'>Confirm</button>
 					</div>	
 			<!--<form class = 'modal-submit' method = "POST" action = "">
 				<input type = 'submit' name='submitForm' value = 'Submit'/>

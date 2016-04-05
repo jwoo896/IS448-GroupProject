@@ -75,7 +75,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/chipsahoy.jpg" alt="Chips Ahoy"/><br/>
 				Quantity <select name="chipsahoy">
 							<option>0</option>
@@ -99,7 +99,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/famousamos.jpeg" alt="Famous Amos"/><br/>
 				Quantity <select name="famousamos">
 							<option>0</option>
@@ -121,7 +121,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/nillawafers.jpg" alt="Nilla Wafers"/><br/>
 				Quantity <select name="nillawafers">
 							<option>0</option>
@@ -145,7 +145,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/nutterbutter.jpg" alt="Nutter Butter"/><br/>
 				Quantity <select name="nutterbutter">
 							<option>0</option>
@@ -167,7 +167,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/nuttybars.jpg" alt="Nutty Bars"/><br/>
 				Quantity <select name="nuttybars">
 							<option>0</option>
@@ -189,7 +189,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="cookiescart.php">
+			<form method="POST" action="">
 				<img src="POS design/cookies/oreos.jpg" alt="Oreo"/><br/>
 				Quantity <select name="oreo">
 							<option>0</option>

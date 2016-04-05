@@ -74,7 +74,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/cliffbar.png" alt="Cliff Bar"/><br/>
 				Quantity <select name="cliffbar">
 							<option>0</option>
@@ -98,7 +98,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/fiberone.jpg" alt="Fiber One"/><br/>
 				Quantity <select name="fiberone">
 							<option>0</option>
@@ -120,7 +120,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/quakerbar.jpg" alt="Quaker Bar"/><br/>
 				Quantity <select name="quakerbar">
 							<option>0</option>
@@ -144,7 +144,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/kashibar.png" alt="Kashi Bar"/><br/>
 				Quantity <select name="kashibar">
 							<option>0</option>
@@ -166,7 +166,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/kindbar.png" alt="Kind Bar"/><br/>
 				Quantity <select name="kindbar">
 							<option>0</option>
@@ -188,7 +188,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolacart.php">
+			<form method="POST" action="">
 				<img src="POS design/granolabars/naturevalley.jpg" alt="Nature Valley"/><br/>
 				Quantity <select name="naturevalley">
 							<option>0</option>
