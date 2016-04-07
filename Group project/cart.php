@@ -66,7 +66,7 @@
 					<th>Price</th>
 				</tr>
 				<?php foreach($_SESSION as $item => $quantity){
-				if ($item != 'User' && $item != 'auth' && $item != 'pin'){?>
+				if ($item != 'User' && $item != 'auth' && $item != 'pin' && $item != 'permission'){?>
 				<tr>
 					<td><?php echo $item?></td>
 					<td><?php echo $quantity?></td>
