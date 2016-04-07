@@ -12,7 +12,7 @@
 		if(!isset($_SESSION['Canada Dry'])){
 			$_SESSION['Canada Dry'] = $_POST['canadadry'];
 		} else {
-			$$_SESSION["Canada Dry"] += $_POST['canadadry'];
+			$_SESSION["Canada Dry"] += $_POST['canadadry'];
 		}
 	}
 	if (!empty($_POST['izze'])){

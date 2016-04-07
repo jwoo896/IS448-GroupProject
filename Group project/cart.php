@@ -87,15 +87,15 @@
 						<table border='1px'>
 							<tr>
 								<th>Sub-total<th>
-								<td><?php echo $totalPrice?></td>
+								<td><?php echo $totalUp?></td>
 							</tr>
 							<tr>
 								<th>Tax</th>
-								<td><?php $tax = $totalPrice * .06; echo $tax?></td>
+								<td><?php $tax = $totalUp * .06; echo $tax?></td>
 							</tr>
 							<tr>
 								<th>Total</th>
-								<td><?php $totalPrice = $totalPrice + $tax; echo $totalPrice?></td>
+								<td><?php $totalUp = $totalUp + $tax; echo $totalUp?></td>
 							</tr>
 						</table>
 						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
