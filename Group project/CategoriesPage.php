@@ -5,6 +5,7 @@
 			case "administrator":
 				$page = "addUser.php";
 				$pageName = "Add User";
+				echo "switch case";
 			break;
 
 			case "accountant":

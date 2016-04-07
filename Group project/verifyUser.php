@@ -10,6 +10,7 @@
 	require_once("libs.php");
 
 		$pin = $_POST["pin"];
+		echo $pin;
 
 		$conn = connect();
 
