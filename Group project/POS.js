@@ -30,3 +30,8 @@ function showModal(){
 function closeModal(){
 	document.getElementById('confirmationModal').className = 'modalHide';	
 }
+
+function finalize(newLocation){
+	window.location = newLocation;
+	return false;
+}
