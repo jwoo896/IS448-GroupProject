@@ -25,19 +25,19 @@
 			case "administrator":
 				//Will be replaced with admin page redirect
 				$_SESSION["auth"] = true;
-				header("Location:categoriesPage.php");
+				header("Location:admin.php");
 				break;
 
 			case "guest":
 				//Will be replaced with guest page redirect
 				$_SESSION["auth"] = true;
-				header("Location:categoriesPage.php");
+				header("Location:indexed.php");
 				break;
 
 			case "accountant":
 				//Will be replaced with accountant page redirect
 				$_SESSION["auth"] = true;
-				header("Location:categoriesPage.php");
+				header("Location:accountant.php");
 				break;
 			default:
 				echo("invalid credentials");
