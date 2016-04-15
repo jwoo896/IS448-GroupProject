@@ -53,7 +53,7 @@
 	<script type="text/javascript" src="POS.js"></script>
 	<script type="text/javascript" src="modalJs.js"></script>
 </head>
-<body
+<body>
 	<?php
 		if(!empty($_POST['moreRequested'])){
 			$itemNum = intval($_POST['moreRequested']);
@@ -64,7 +64,6 @@
 			unset($_POST['moreRequested']);?>
 			onload="openModal();"<?php
 		}?>
->
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
 	  <div class="modal-content">
@@ -77,31 +76,28 @@
 		</div>
 	  </div>
 </div>
-
-	<div id="divWrapper">
+<div id="divWrapper">
 	<div id="divHeader">
-	  <div id="divImageHead">
+		<div id="divImageHead">
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
 		</div>
-		
-		
-		<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
-		<div id="divMenu">
-			<div id="menuPosition">
-			<ul>
-				<li ><a href="categoriesPage.html" >Categories</a></li>
-				<li><a href="contact.html" >Contact</a></li>
-				<li><a href="" >Logout</a></li>
-				<li><a href="checkout.html" >Cart</a></li>
-			</ul>
-			</div>
+	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
+	<div id="divMenu">
+		<div id="menuPosition">
+		<ul>
+			<li><a href="categoriesPage.php">Categories</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="logout.php">Logout</a></li>
+		<li><a href="cart.php">Cart</a></li>
+		</ul>
 		</div>
+	</div>
 	</div>
 	<div id="divBody">
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/cheetos.png" alt="Cheetos"/><br/>
 				Quantity <select name="cheetos">
 							<option>0</option>
@@ -128,7 +124,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/doritos.png" alt="Doritos"/><br/>
 				Quantity <select name="doritos">
 							<option>0</option>
@@ -145,14 +141,14 @@
 				 		</select>
 					<input type="submit" value="Add" style="display:inline;"/>
 				</form>
-					<form method="POST" action="chipsmenu.php" style="display:inline;">
+					<form method="POST" action="" style="display:inline;">
 				 		<input type="hidden" name="moreRequested" value="008" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>				 	
 			 	</form>
 
 			</td>
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/fritos.jpg" alt="Fritos"/><br/>
 				Quantity <select name="fritos">
 							<option>0</option>
@@ -169,7 +165,7 @@
 				 		</select>
 					<input type="submit" value="Add" style="display:inline;"/>
 				</form>
-					<form method="POST" action="chipsmenu.php" style="display:inline;">
+					<form method="POST" action="" style="display:inline;">
 				 		<input type="hidden" name="moreRequested" value="009" />
 
 			 		<input type="submit" value="Request more" style="display:inline;"/>				 	
@@ -179,7 +175,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/funyuns.png" alt="Funyuns"/><br/>
 				Quantity <select name="funyuns">
 							<option>0</option>
@@ -196,14 +192,14 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 				</form>
-				<form method="POST" action="chipsmenu.php" style="display:inline;">
+				<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="010" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>				 	
 
 			 	</form>
 			</td>
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/lays.jpg" alt="Lays"/><br/>
 				Quantity <select name="lays">
 							<option>0</option>
@@ -223,13 +219,13 @@
 
 
 			</form>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<input type="hidden" name="moreRequested" value="011" />
 		 		<input type="submit" value="Request more" style="display:inline;"/>				 	
 		 	</form>
 			</td>
 			<td>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/chips/sunchips.gif" alt="Sunchips"/><br/>
 				Quantity <select name="sunchips">
 							<option>0</option>
@@ -249,7 +245,7 @@
 
 
 			</form>
-			<form method="POST" action="chipsmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<input type="hidden" name="moreRequested" value="012" />
 		 		<input type="submit" value="Request more" style="display:inline;"/>				 	
 		 	</form>

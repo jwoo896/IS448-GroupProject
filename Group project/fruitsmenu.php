@@ -51,6 +51,16 @@
 	<script type="text/javascript" src="POS.js"></script>
 </head>
 <body>
+	<?php
+		if(!empty($_POST['moreRequested'])){
+			$itemNum = intval($_POST['moreRequested']);
+			$conn = connect();
+			$sql = "UPDATE inventory SET requested=1 WHERE product_id='$itemNum'";
+			$result = mysql_query($sql);
+			disconnect($conn); 
+			unset($_POST['moreRequested']);?>
+			onload="openModal();"<?php
+		}?>
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -75,7 +85,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/apple.jpg" alt="Apple"/><br/>
 				Quantity <select name="apple">
 							<option>0</option>
@@ -90,16 +100,17 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-				 	<input type="submit" value="Add"/>
+				 	<input type="submit" value="Add" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
-				 	<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="019" />
+			 		<input type="submit" value="Request more" style="display:inline;"/>				
+			</form>
 			</form>
 			</td>
 
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/banana.jpg" alt="Banana"/><br/>
 				Quantity <select name="banana">
 							<option>0</option>
@@ -115,13 +126,14 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="020" />
+			 		<input type="submit" value="Request more" style="display:inline;"/>				
+			</form>
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/kiwi.jpg" alt="Kiwi"/><br/>
 				Quantity <select name="kiwi">
 							<option>0</option>
@@ -137,15 +149,16 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="021" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/orange.jpeg" alt="Orange"/><br/>
 				Quantity <select name="orange">
 							<option>0</option>
@@ -161,13 +174,14 @@
 							<option>10</option>
 				 		</select>
 				 	<input type="submit" value="Add"/>
-				 	<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="022" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/peach.png" alt="Peach"/><br/>
 				Quantity <select name="peach">
 							<option>0</option>
@@ -183,13 +197,14 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="023" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/pear.jpg" alt="Pear"/><br/>
 				Quantity <select name="pear">
 							<option>0</option>
@@ -205,9 +220,10 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="024" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 		</tr>

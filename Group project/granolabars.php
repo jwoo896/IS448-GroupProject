@@ -52,7 +52,7 @@
 	<script type="text/javascript" src="POS.js"></script>
 	<script type="text/javascript" src="modalJs.js"></script>
 </head>
-<body
+<body>
 	<?php
 		if(!empty($_POST['moreRequested'])){
 			$itemNum = intval($_POST['moreRequested']);
@@ -63,7 +63,7 @@
 			unset($_POST['moreRequested']);?>
 			onload="openModal();"<?php
 		}?>
->
+
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
 	  <div class="modal-content">
@@ -101,7 +101,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/cliffbar.png" alt="Cliff Bar"/><br/>
 				Quantity <select name="cliffbar">
@@ -128,7 +128,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/fiberone.jpg" alt="Fiber One"/><br/>
 				Quantity <select name="fiberone">
@@ -154,7 +154,7 @@
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/quakerbar.jpg" alt="Quaker Bar"/><br/>
 				Quantity <select name="quakerbar">
@@ -173,7 +173,7 @@
 				<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="015" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 
@@ -182,7 +182,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/kashibar.png" alt="Kashi Bar"/><br/>
 				Quantity <select name="kashibar">
@@ -201,14 +201,14 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="016" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/kindbar.png" alt="Kind Bar"/><br/>
 				Quantity <select name="kindbar">
@@ -227,14 +227,14 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="017" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/granolabars/naturevalley.jpg" alt="Nature Valley"/><br/>
 				Quantity <select name="naturevalley">
@@ -253,7 +253,7 @@
 			<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="018" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 

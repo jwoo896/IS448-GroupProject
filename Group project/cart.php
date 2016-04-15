@@ -14,7 +14,7 @@
 		function calc($type,$quantity){
 			if($type = 'Canada Dry' || $type = 'Izze' || $type = 'Pepsi' 
 				|| $type = 'Root Beer' || $type = 'Sprite' 
-				|| $type = 'Doritos' || $type = 'Funyuns' || $type = 'Kiwi'
+				|| $type = 'Doritos' || $type = 'Funyuns' || $type = 'Cliffbar' || $type = 'Kiwi'
 				|| $type = 'Orange' || $type = 'Peach' || $type = "Pear"
 				|| $type = 'Chips Ahoy' || $type = 'Famous Amos' || $type = 'Nilla Wafers'
 				|| $type = 'Oreos'){
@@ -22,7 +22,8 @@
 				return $iPrice;
 			}
 			if($type = 'Deer Park' || $type = 'Cheetos' || $type = 'Fritos' 
-				|| $type = 'Lays' || $type = 'Sunchips' || $type = 'Apple' 
+				|| $type = 'Lays' || $type = 'Sunchips' || $type = 'Fiber One' || $type = 'Quaker Bar'
+				|| $type = 'Kashibar' || $type = 'Kindbar' || $type = 'Nature Valley' || $type = 'Apple' 
 				|| $type = 'Banana' || $type = 'Nutter Butters' || $type = 'Nutty Bars'){
 				$iPrice = $quantity * .5;
 				return $iPrice;

@@ -23,6 +23,16 @@
 	<script type="text/javascript" src="POS.js"></script>
 </head>
 <body>
+	<?php
+		if(!empty($_POST['moreRequested'])){
+			$itemNum = intval($_POST['moreRequested']);
+			$conn = connect();
+			$sql = "UPDATE inventory SET requested=1 WHERE product_id='$itemNum'";
+			$result = mysql_query($sql);
+			disconnect($conn); 
+			unset($_POST['moreRequested']);?>
+			onload="openModal();"<?php
+		}?>
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -46,7 +56,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/yogurt/chobani.png" alt="Chobani"/><br/>
 				Quantity <select name="chobani">
 							<option>0</option>
@@ -63,14 +73,15 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 				 <!--create a new php file for this? or add to cartphp?-->
-				 	<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="031" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/yogurt/dannon.png" alt="Dannon"/><br/>
 				Quantity <select name="dannon">
 							<option>0</option>
@@ -86,9 +97,10 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-					<form method="$_POST" action="restockRequest.php">
-				 		<input type="submit" value="Request more"/>
-				 	</form>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="032" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
 			</form>
 			</td>
 			<td>			
