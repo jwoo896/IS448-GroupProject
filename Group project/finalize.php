@@ -54,7 +54,20 @@
 	$uvar = $dvar['debt'] + $totalUp;
 	$uqry = "UPDATE user_login SET debt = $uvar WHERE pin = $pin";
 	mysql_query($uqry);
+
+	$qvar = mysql_fetch_array(mysql_query("SELECT productName, quantity FROM inventory"));
+	foreach ($_SESSION as $item => $quantity) {
+		if ($item != 'auth' && $item != 'User' && $item != 'pin' && $item != 'permission'){
+			if ($qvar['productName'] = $item){
+				$quvar = $qvar['quantity'] - $quantity;
+				mysql_query("UPDATE inventory SET quantity = $quvar WHERE productName = '$item'");
+			}
+		}
+	}	
+	
 	disconnect($conn);
+
+
 
 	writeToFile();	
 

@@ -18,7 +18,6 @@ function connect(){
 	}
 	return $conn;
 }
-
 /* 
 ** Desc: Disconnects MYSQL object 
 */

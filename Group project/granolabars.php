@@ -52,7 +52,7 @@
 	<script type="text/javascript" src="POS.js"></script>
 	<script type="text/javascript" src="modalJs.js"></script>
 </head>
-<body>
+<body
 	<?php
 		if(!empty($_POST['moreRequested'])){
 			$itemNum = intval($_POST['moreRequested']);
@@ -63,7 +63,7 @@
 			unset($_POST['moreRequested']);?>
 			onload="openModal();"<?php
 		}?>
-
+>
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
 	  <div class="modal-content">

@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once("libs.php");
 	if (!empty($_POST['apple'])){
 		if(!isset($_SESSION['Apple'])){
 			$_SESSION['Apple'] = $_POST['apple'];
@@ -50,7 +51,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
 </head>
-<body>
+<body
 	<?php
 		if(!empty($_POST['moreRequested'])){
 			$itemNum = intval($_POST['moreRequested']);
@@ -61,6 +62,7 @@
 			unset($_POST['moreRequested']);?>
 			onload="openModal();"<?php
 		}?>
+>
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
