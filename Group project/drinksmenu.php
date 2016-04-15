@@ -54,13 +54,10 @@
 </head>
 <body>
 	<div id="divWrapper">
-	<div id="divImageHead">
-		<p>
-			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-		</p>
-	</div>
-	
-	
+	<div id="divHeader">
+		<div id="divImageHead">
+				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
+		</div>
 	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
 	<div id="divMenu">
 		<div id="menuPosition">
@@ -72,10 +69,7 @@
 		</ul>
 		</div>
 	</div>
-	
-	<p>
-	<hr/>
-	</p>
+	</div>
 	<div id="divBody">
 	<table>
 		<tr>

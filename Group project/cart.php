@@ -86,7 +86,7 @@
 					<div class = 'modal-body'>
 						<table border='1px'>
 							<tr>
-								<th>Sub-total<th>
+								<th>Sub-total</th>
 								<td><?php echo $totalUp?></td>
 							</tr>
 							<tr>
