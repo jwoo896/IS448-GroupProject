@@ -92,7 +92,7 @@
 		<div id="divMenu">
 			<div id="menuPosition">
 			<ul>
-				<li ><a href="categoriesPage.html" >Categories</a></li>
+				<li ><a href="CategoriesPage.php" >Categories</a></li>
 				<li><a href="contact.html" >Contact</a></li>
 				<li><a href="" >Logout</a></li>
 				<li><a href="checkout.html" >Cart</a></li>
@@ -135,7 +135,7 @@
 			</td>
 
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="drinksmenu.php" style="display:inline;">
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
 				Quantity <select name="canadadry">
 							<option>0</option>
