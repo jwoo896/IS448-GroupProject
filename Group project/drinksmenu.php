@@ -79,11 +79,10 @@
 
 	<div id="divWrapper">
 	<div id="divHeader">
-	  <div id="divImageHead">
-
+		<div id="divImageHead">
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-
 		</div>
+<<<<<<< HEAD
 		
 		
 
@@ -98,17 +97,25 @@
 				<li><a href="checkout.html" >Cart</a></li>
 			</ul>
 			</div>
+=======
+	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
+	<div id="divMenu">
+		<div id="menuPosition">
+		<ul>
+			<li><a href="categoriesPage.php">Categories</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="logout.php">Logout</a></li>
+		<li><a href="cart.php">Cart</a></li>
+		</ul>
+>>>>>>> origin/master
 		</div>
 	</div>
-
-
-
-
+	</div>
 	<div id="divBody">
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/drinks/deerpark.jpg" alt="Deer Park"/><br/>
 				Quantity <select name="deerpark">
 							<option>0</option>
@@ -126,7 +133,7 @@
 				 	<input type="submit" value="Add" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="001" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
 					
@@ -135,7 +142,11 @@
 			</td>
 
 			<td>
+<<<<<<< HEAD
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
+=======
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
 				Quantity <select name="canadadry">
 							<option>0</option>
@@ -152,14 +163,14 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="002" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>	
 
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/drinks/izze.jpg" alt="Izze"/><br/>
 				Quantity <select name="izze">
 							<option>0</option>
@@ -176,7 +187,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="003" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>			
 
@@ -185,7 +196,7 @@
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/drinks/pepsi.jpg" alt="Pepsi"/><br/>
 				Quantity <select name="pepsi">
 							<option>0</option>
@@ -202,14 +213,14 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="004" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
 
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/drinks/rootbeer.jpg" alt="Root Beer"/><br/>
 				Quantity <select name="rootbeer">
 							<option>0</option>
@@ -226,14 +237,14 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="005" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
 
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="drinkscart.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/drinks/sprite.png" alt="Sprite"/><br/>
 				Quantity <select name="Sprite">
 							<option>0</option>
@@ -250,7 +261,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
+			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="006" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>				
 

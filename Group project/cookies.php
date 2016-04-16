@@ -53,7 +53,10 @@
 	<script type="text/javascript" src="POS.js"></script>
 	<script type="text/javascript" src="modalJs.js"></script>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 <body
 	<?php
 		if(!empty($_POST['moreRequested'])){
@@ -66,6 +69,7 @@
 			onload="openModal();"<?php
 		}?>
 >
+<<<<<<< HEAD
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
 	  <div class="modal-content">
@@ -78,6 +82,8 @@
 		</div>
 	  </div>
 </div>
+=======
+>>>>>>> origin/master
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -101,7 +107,11 @@
 	<table>
 		<tr>
 			<td>
+<<<<<<< HEAD
 			<form method="POST" action="cookies.php" style="display:inline;">
+=======
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/cookies/chipsahoy.jpg" alt="Chips Ahoy"/><br/>
 				Quantity <select name="chipsahoy">
 							<option>0</option>
@@ -118,16 +128,27 @@
 				 		</select>
 				 	<input type="submit" value="Add" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
+<<<<<<< HEAD
 			</form>
 			<form method="POST" action="cookies.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="025" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
 					
+=======
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="025" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+>>>>>>> origin/master
 			</form>
 			</td>
 
 			<td>
+<<<<<<< HEAD
 			<form method="POST" action="cookies.php" style="display:inline;">
+=======
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/cookies/famousamos.jpeg" alt="Famous Amos"/><br/>
 				Quantity <select name="famousamos">
 							<option>0</option>
@@ -142,6 +163,7 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
+<<<<<<< HEAD
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 			<form method="POST" action="cookies.php" style="display:inline;">
@@ -151,6 +173,17 @@
 			</td>
 			<td>
 			<form method="POST" action="cookies.php" style="display:inline;">
+=======
+					<input type="submit" value="Add"/>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="026" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+			</form>
+			</td>
+			<td>
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/cookies/nillawafers.jpg" alt="Nilla Wafers"/><br/>
 				Quantity <select name="nillawafers">
 							<option>0</option>
@@ -166,17 +199,28 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
+<<<<<<< HEAD
 			</form>
 			<form method="POST" action="cookies.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="027" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>			
 
+=======
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="027" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+>>>>>>> origin/master
 			</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
+<<<<<<< HEAD
 			<form method="POST" action="cookies.php" style="display:inline;">
+=======
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/cookies/nutterbutter.jpg" alt="Nutter Butter"/><br/>
 				Quantity <select name="nutterbutter">
 							<option>0</option>
@@ -192,6 +236,7 @@
 							<option>10</option>
 				 		</select>
 				 	<input type="submit" value="Add"/>
+<<<<<<< HEAD
 			</form>
 			<form method="POST" action="cookies.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="028" />
@@ -201,6 +246,16 @@
 			</td>
 			<td>
 			<form method="POST" action="cookies.php" style="display:inline;">
+=======
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="028" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+			</form>
+			</td>
+			<td>
+			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/cookies/nuttybars.jpg" alt="Nutty Bars"/><br/>
 				Quantity <select name="nuttybars">
 							<option>0</option>
@@ -215,15 +270,23 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
+<<<<<<< HEAD
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 			<form method="POST" action="cookies.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="029" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
+=======
+					<input type="submit" value="Add"/>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="029" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+>>>>>>> origin/master
 			</form>
 			</td>
 			<td>
-			<form method="POST" action="">
+			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/cookies/oreos.jpg" alt="Oreo"/><br/>
 				Quantity <select name="oreo">
 							<option>0</option>
@@ -238,6 +301,7 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
+<<<<<<< HEAD
 					<input type="submit" value="Add" style="display:inline;"/>
 			
 			</form>
@@ -245,6 +309,13 @@
 					<input type="hidden" name="moreRequested" value="006" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>				
 
+=======
+					<input type="submit" value="Add"/>
+			<form method="POST" action="" style="display:inline;">
+					<input type="hidden" name="moreRequested" value="030" />
+					<input type="submit" value="Request more" style="display:inline;"/>				 	
+			</form>
+>>>>>>> origin/master
 			</form>
 			</td>
 		</tr>
