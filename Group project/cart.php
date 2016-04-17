@@ -102,9 +102,6 @@
 						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
 						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'location.href="finalize.php"'>Confirm</button>
 					</div>	
-			<!--<form class = 'modal-submit' method = "POST" action = "">
-				<input type = 'submit' name='submitForm' value = 'Submit'/>
-			</form>-->
 				</div>
 			</div>
 		</div>

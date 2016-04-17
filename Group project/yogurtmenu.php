@@ -36,7 +36,7 @@
 			onload="openModal();"<?php
 		}?>
 >
-<<<<<<< HEAD
+
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
 	  <div class="modal-content">
@@ -49,8 +49,7 @@
 		</div>
 	  </div>
 </div>
-=======
->>>>>>> origin/master
+
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -62,7 +61,7 @@
 		<div id="divMenu">
 			<div id="menuPosition">
 			<ul>
-				<li ><a href="CategoriesPage.php" >Categories</a></li>
+				<li ><a href="categoriesPage.php" >Categories</a></li>
 				<li><a href="contact.html" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
@@ -74,11 +73,11 @@
 	<table>
 		<tr>
 			<td>
-<<<<<<< HEAD
+
 			<form method="POST" action="yogurtmenu.php" style="display:inline;">
-=======
+
 			<form method="POST" action="" style="display:inline;">
->>>>>>> origin/master
+
 				<img src="POS design/yogurt/chobani.png" alt="Chobani"/><br/>
 				Quantity <select name="chobani">
 							<option>0</option>
@@ -95,26 +94,26 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 				 <!--create a new php file for this? or add to cartphp?-->
-<<<<<<< HEAD
+ 
 			</form>
 			<form method="POST" action="yogurtmenu.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="030" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
-=======
+
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="031" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 			</form>
->>>>>>> origin/master
+
 			</form>
 			</td>
 
 			<td>
-<<<<<<< HEAD
+ 
 			<form method="POST" action="yogurtmenu.php" style="display:inline;">
-=======
+
 			<form method="POST" action="" style="display:inline;">
->>>>>>> origin/master
+ 
 				<img src="POS design/yogurt/dannon.png" alt="Dannon"/><br/>
 				Quantity <select name="dannon">
 							<option>0</option>
@@ -130,17 +129,17 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-<<<<<<< HEAD
+
 			</form>
 			<form method="POST" action="yogurtmenu.php" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="031" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>
-=======
+
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="032" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 			</form>
->>>>>>> origin/master
+ 
 			</form>
 			</td>
 			<td>			
