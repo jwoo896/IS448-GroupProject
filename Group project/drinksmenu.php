@@ -83,6 +83,22 @@
 		<div id="divImageHead">
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
 		</div>
+<<<<<<< HEAD
+		
+		
+
+
+		<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
+		<div id="divMenu">
+			<div id="menuPosition">
+			<ul>
+				<li ><a href="CategoriesPage.php" >Categories</a></li>
+				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="" >Logout</a></li>
+				<li><a href="checkout.html" >Cart</a></li>
+			</ul>
+			</div>
+=======
 	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
 	<div id="divMenu">
 		<div id="menuPosition">
@@ -92,6 +108,7 @@
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		</ul>
+>>>>>>> origin/master
 		</div>
 	</div>
 	</div>
@@ -126,7 +143,11 @@
 			</td>
 
 			<td>
+<<<<<<< HEAD
+			<form method="POST" action="drinksmenu.php" style="display:inline;">
+=======
 			<form method="POST" action="" style="display:inline;">
+>>>>>>> origin/master
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
 				Quantity <select name="canadadry">
 							<option>0</option>

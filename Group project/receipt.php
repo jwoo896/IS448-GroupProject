@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,22 +40,22 @@
 			<tr>
 				<th>Employee ID</th>
 				<th>Employee Name</th>
-				<th>Receipt ID</th>
-				<th>Date of Generation</th>
+				<th>Accumulated Debt</th>
 			</tr>
 		<?php
-		$receipts = fopen("receipts.txt", "r") or die("Unable to open file!");
-		while(!feof($receipts)) {
-			$receiptline = fgets($receipts);
-			$entries = explode(" ", $receiptline);
+		require_once("libs.php");
+	
+		$conn = connect();
+	
+		$result = mysql_query("SELECT pin, first_name, last_name, debt FROM user_login WHERE debt>0");
+		
+		while($row = mysql_fetch_assoc($result)) {
 			echo "<tr>";
-			echo "<td>".$entries[0]."</td>";
-			echo "<td>".$entries[1].$entries[2]."</td>";
-			echo "<td>".$entries[3]."</td>";
-			echo "<td>".$entries[4]."</td>";
+			echo "<td>".$row['pin']."</td>";
+			echo "<td>".$row['first_name']." ".$row['last_name']."</td>";
+			echo "<td>".$row['debt']."</td>";
 			echo "</tr>";
 		}
-		fclose($receipts);
 		
 		 
 		?>
@@ -61,8 +64,8 @@
 				<td></td>
 				<td></td>
 				<td>
-					<form action="receipt.php">
-					<input type="submit" value="Update Payrolls"/>
+					<form action="CategoriesPage.php">
+					<input type="submit" value="Acknowledge"/>
 					</form>
 				</td>
 				

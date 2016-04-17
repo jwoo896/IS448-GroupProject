@@ -26,21 +26,23 @@
 </head>
 <body>
 	<div id="divWrapper">
-	<div id="divImageHead">
-			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-	</div>
+	<div id="divHeader">
+		<div id="divImageHead">
+				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
+		</div>
 	
 	
 	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
-	<div id="divMenu">
-		<div id="menuPosition">
-		<ul>
-		<li><a href=<?php echo("'$page'> $pageName") ?></a></li>
-		<li><a href="categoriesPage.php">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="logout.php">Logout</a></li>
-		<li><a href="cart.php">Cart</a></li>
-		</ul>
+		<div id="divMenu">
+			<div id="menuPosition">
+				<ul>
+					<li><a href=<?php echo("'$page'> $pageName") ?></a></li>
+					<li><a href="CategoriesPage.php">Categories</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="logout.php">Logout</a></li>
+					<li><a href="cart.php">Cart</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
