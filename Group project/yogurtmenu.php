@@ -62,7 +62,7 @@
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.php" >Categories</a></li>
-				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="contact.php" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
 			</ul>
@@ -96,15 +96,9 @@
 				 <!--create a new php file for this? or add to cartphp?-->
  
 			</form>
-			<form method="POST" action="yogurtmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="030" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="031" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
-
 			</form>
 			</td>
 
@@ -131,15 +125,9 @@
 					<input type="submit" value="Add"/>
 
 			</form>
-			<form method="POST" action="yogurtmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="031" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="032" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
- 
 			</form>
 			</td>
 			<td>			

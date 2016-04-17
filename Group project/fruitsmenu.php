@@ -89,7 +89,7 @@
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.php" >Categories</a></li>
-				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="contact.php" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
 			</ul>
@@ -101,7 +101,6 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
 			<form method="POST" action="" style="display:inline;">
 				<img src="POS design/fruits/apple.jpg" alt="Apple"/><br/>
 				Quantity <select name="apple">
@@ -121,22 +120,13 @@
 				 <!--create a new php file for this? or add to cartphp?-->
 
 			</form>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="019" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="019" />
 			 		<input type="submit" value="Request more" style="display:inline;"/>				
 			</form>
-
-			</form>
 			</td>
 
 			<td>
-
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/fruits/banana.jpg" alt="Banana"/><br/>
@@ -153,20 +143,12 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+					<input type="submit" value="Add" style="display:inline;"/>
 
 			</form>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="020" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-			</form>
-			</td>
-			<td>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="020" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>				
-			</form>
+			 		<input type="submit" value="Request more" style="display:inline;"/>
 			</form>
 			</td>
 			<td>
@@ -186,26 +168,17 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+					<input type="submit" value="Add" style="display:inline;"/>
 
 			</form>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="021" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="021" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
-
 			</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
-
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/fruits/orange.jpeg" alt="Orange"/><br/>
@@ -222,21 +195,12 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-				 	<input type="submit" value="Add"/>
+				 	<input type="submit" value="Add" style="display:inline;"/>
 
 				</form>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="022" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-			</form>
-			</td>
-			<td>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="022" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
 			</form>
 			</td>
 			<td>
@@ -256,21 +220,12 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+					<input type="submit" value="Add" style="display:inline;"/>
 
 				</form>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="023" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-			</form>
-			</td>
-			<td>
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="023" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
+			 		<input type="submit" value="Request more" style="display:inline;"/>
 			</form>
 			</td>
 			<td>
@@ -291,16 +246,11 @@
 							<option>10</option>
 				 		</select>
 					<input type="submit" value="Add"/>
-
-			<form method="POST" action="fruitsmenu.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="024" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
+			</form>
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="024" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 
-			</form>
 			</form>
 			</td>
 		</tr>

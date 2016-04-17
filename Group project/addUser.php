@@ -24,7 +24,7 @@
 		<div id="menuPosition">
 		<ul>
 			<li><a href="categoriesPage.html">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
+		<li><a href="contact.php">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		<li><a href="addUser.php">Add User</a></li>

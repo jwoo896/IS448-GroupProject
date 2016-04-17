@@ -10,10 +10,9 @@
 		//$_POST['feedback'] and write to a file
 	?>
 	<div id="divWrapper">
+	<div id="divHeader">
 	<div id="divImageHead">
-		<p>
 			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-		</p>
 	</div>
 	
 	
@@ -22,19 +21,15 @@
 		<div id="menuPosition">
 		<ul>
 			<li><a href="categoriesPage.html">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="">Logout</a></li>
+		<li><a href="contact.php">Contact</a></li>
+		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		</ul>
 		</div>
 	</div>
-	
-	<p>
-	<hr/>
-	</p>
-
-	<p>
+</div>
+	<div id="divBody">
 		Thank you for your feedback!
-	</p>
+	</div>
 </body>
 </html>

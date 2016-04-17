@@ -91,7 +91,7 @@
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.php" >Categories</a></li>
-				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="contact.php" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
 			</ul>
@@ -102,9 +102,6 @@
 	<table>
 		<tr>
 			<td>
-
-			<form method="POST" action="cookies.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/cookies/chipsahoy.jpg" alt="Chips Ahoy"/><br/>
@@ -125,22 +122,13 @@
 				 <!--create a new php file for this? or add to cartphp?-->
 
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="025" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="025" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 			</form>
-
-			</form>
 			</td>
 
 			<td>
-
-			<form method="POST" action="cookies.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/cookies/famousamos.jpeg" alt="Famous Amos"/><br/>
@@ -160,19 +148,9 @@
 
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="026" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>	
-			</form>
-			</td>
-			<td>
-			<form method="POST" action="cookies.php" style="display:inline;">
-
-					<input type="submit" value="Add"/>
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="026" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
+			 		<input type="submit" value="Request more" style="display:inline;"/>	
 			</form>
 			</td>
 			<td>
@@ -192,25 +170,16 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-
+				 	<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="027" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>			
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="027" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
-
 			</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
-
-			<form method="POST" action="cookies.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 
 				<img src="POS design/cookies/nutterbutter.jpg" alt="Nutter Butter"/><br/>
@@ -227,23 +196,13 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-				 	<input type="submit" value="Add"/>
-
+				 	<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="028" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
-			</form>
-			</td>
-			<td>
-			<form method="POST" action="cookies.php" style="display:inline;">
-
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="028" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
 			</form>
-			</form>
+			
 			</td>
 			<td>
 			<form method="POST" action="" style="display:inline;">
@@ -265,16 +224,9 @@
  
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="029" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>
-
-					<input type="submit" value="Add"/>
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="029" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
- 
 			</form>
 			</td>
 			<td>
@@ -297,16 +249,9 @@
 					<input type="submit" value="Add" style="display:inline;"/>
 			
 			</form>
-			<form method="POST" action="cookies.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="006" />
-			 		<input type="submit" value="Request more" style="display:inline;"/>				
-
-					<input type="submit" value="Add"/>
 			<form method="POST" action="" style="display:inline;">
 					<input type="hidden" name="moreRequested" value="030" />
 					<input type="submit" value="Request more" style="display:inline;"/>				 	
-			</form>
-
 			</form>
 			</td>
 		</tr>
