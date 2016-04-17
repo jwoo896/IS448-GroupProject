@@ -64,8 +64,8 @@
 				<td></td>
 				<td></td>
 				<td>
-					<form action="receipt.php">
-					<input type="submit" value="Update Payrolls"/>
+					<form action="CategoriesPage.php">
+					<input type="submit" value="Acknowledge"/>
 					</form>
 				</td>
 				
