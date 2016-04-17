@@ -126,11 +126,11 @@
 			</td>
 
 			<td>
-<<<<<<< HEAD
+ 
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
-=======
+
 			<form method="POST" action="" style="display:inline;">
->>>>>>> origin/master
+
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
 				Quantity <select name="canadadry">
 							<option>0</option>

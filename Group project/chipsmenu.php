@@ -241,9 +241,7 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-
-
-
+				 	<input type="submit" value="Add"/>
 
 			</form>
 			<form method="POST" action="" style="display:inline;">
