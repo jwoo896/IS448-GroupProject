@@ -61,8 +61,9 @@
 			$result = mysql_query($sql);
 			disconnect($conn); 
 			unset($_POST['moreRequested']);?>
-			onload="openModal();"<?php
-		}?>
+			onload="openModal();"
+			<?php
+			}?>
 >
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
@@ -75,7 +76,7 @@
 		<div class="modal-footer">
 		</div>
 	  </div>
-</div>
+	</div>
 
 	<div id="divWrapper">
 	<div id="divHeader">

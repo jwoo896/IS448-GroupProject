@@ -23,6 +23,9 @@ window.onclick = function(event){
 	}
 }
 
+function openModal(){
+	document.getElementById("requestedModal").style.display="block";
+}
 
 function showModal(){
 	document.getElementById('confirmationModal').className = 'modalShow';
