@@ -1,3 +1,4 @@
+<!--Use case 3. Written by Jae Woo-->
 <?php
 	session_start();
 	//write items of each category to file IF user hits confirm

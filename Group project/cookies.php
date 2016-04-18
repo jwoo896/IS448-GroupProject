@@ -1,3 +1,4 @@
+<!--Use case 2. HTML and PHP Written by Jae Woo.-->
 <?php
 	session_start();
 	require_once("libs.php");

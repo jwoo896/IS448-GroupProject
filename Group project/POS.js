@@ -1,3 +1,4 @@
+/*
 function restockNotif(){
 	alert("Out of stock. Please request more.");
 }
@@ -21,15 +22,18 @@ window.onclick = function(event){
 		}
 		
 	}
-}
+}*/
 
+
+//written by Scott Thompson
 function openModal(){
 	document.getElementById("requestedModal").style.display="block";
 }
-
+//written by Jae Woo
 function showModal(){
 	document.getElementById('confirmationModal').className = 'modalShow';
 }
+//writen by Jae Woo
 function closeModal(){
 	document.getElementById('confirmationModal').className = 'modalHide';	
 }

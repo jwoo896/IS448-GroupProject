@@ -1,3 +1,4 @@
+<!--Use case 4. HTML written by Jae Woo. PHP written by Brandon Tesar.-->
 <?php
 	require_once("libs.php");
 	credCheck();
