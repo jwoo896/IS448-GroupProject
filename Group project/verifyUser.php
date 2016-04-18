@@ -43,7 +43,9 @@
 				header("Location:categoriesPage.php");
 				break;
 			default:
+
 				echo("invalid credentials");
+				//Javascript redirect after 5 seconds eventually.
 				break;
 		}
 		/*

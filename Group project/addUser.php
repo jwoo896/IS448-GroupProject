@@ -49,6 +49,7 @@
 					<select name="position">
 					<option value="administrator">Administrator</option>
 					<option value="accountant">Accountant</option>
+					<option value="guest">Guest</option>
 					</select>
 
 		<input type="submit" value="Submit"/>
