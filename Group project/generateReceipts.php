@@ -14,10 +14,9 @@
 </head>
 <body>
 	<div id="divWrapper">
+	<div id="divHeader">
 	<div id="divImageHead">
-		<p>
 			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-		</p>
 	</div>
 
 
@@ -33,10 +32,8 @@
 		</ul>
 		</div>
 	</div>
+</div>
 
-	<p>
-	<hr/>
-	</p>
 	<div id="divBody">
 
 	 	<?php

@@ -10,10 +10,9 @@
 </head>
 <body>
 	<div id="divWrapper">
+	<div id="divHeader">	
 	<div id="divImageHead">
-		<p>
 			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-		</p>
 	</div>
 	
 	
@@ -21,18 +20,14 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-		<li><a href="CategoriesPage.html">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="">Logout</a></li>
+		<li><a href="categoriesPage.php">Categories</a></li>
+		<li><a href="contact.php">Contact</a></li>
+		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		</ul>
 		</div>
 	</div>
-	
-	<p>
-	<hr/>
-	</p>
-	
+	</div>
 	<div id="divBody">
 		<h1>Receipts</h1>
 		
@@ -64,7 +59,7 @@
 				<td></td>
 				<td></td>
 				<td>
-					<form action="CategoriesPage.php">
+					<form action="categoriesPage.php">
 					<input type="submit" value="Acknowledge"/>
 					</form>
 				</td>

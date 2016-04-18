@@ -32,9 +32,6 @@
 		</div>
 	</div>
 	
-	<p>
-	<hr/>
-	</p>
 	<div id="divBody">
 	 	<?php 
 	 	if($_SESSION["validLN"] || $_SESSION["validFN"]){

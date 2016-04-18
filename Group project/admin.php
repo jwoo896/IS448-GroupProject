@@ -10,40 +10,41 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
 </head>
-<body>
+<body
+	<?php
+		if(!empty($_POST['completedRequest'])){
+			$itemNum = intval($_POST['completedRequest']);
+			$conn = connect();
+			$sql = "UPDATE inventory SET quantity = restock_quantity WHERE product_id='$itemNum'";
+			$result = mysql_query($sql);
+			$sql = "UPDATE inventory SET requested=0 WHERE product_id='$itemNum'";
+			$result = mysql_query($sql);
+			disconnect($conn); 
+			unset($_POST['completedRequest']);?>
+			onload="openModal();"<?php
+		}?>
+>
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
-
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-
 		</div>
-		
-		
-
-
 		<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
 		<div id="divMenu">
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.html" >Categories</a></li>
 				<li><a href="contact.html" >Contact</a></li>
-				<li><a href="" >Logout</a></li>
+				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="checkout.html" >Cart</a></li>
 			</ul>
 			</div>
-
 		</div>
 	</div>
-
-
-
-
-
 	<div id="divBody">
 		<?php
 			$conn = connect();
-			$sql = "SELECT `productName`, `product_id` FROM `inventory` WHERE requested = 1";
+			$sql = "SELECT `productName`, `product_id`, `quantity`  FROM `inventory` WHERE requested = 1";
 			$result = mysql_query($sql) or die(mysql_error);
 			if(($result)|| (mysql_errno == 0))
 			{
@@ -60,12 +61,25 @@
 					echo "</tr>";
 					while($rows = mysql_fetch_array($result,MYSQL_ASSOC))
 					{
+						$n = 0;
 						echo "<tr>";
 						foreach($rows as $data)
 						{
-							echo "<td>". $data . "</td>";
+								echo "<td>". $data . "</td>";
+							
 						}
-						echo "<td><button>Complete Request</button></td>";
+						foreach($rows as $data)
+						{
+							if($n == 1) {
+								echo "<td>
+										<form method='POST' action='admin.php'>
+										<input type='hidden' value='" . $data . "' name='completedRequest'/>
+										<input type='submit' value='Complete Request'/>
+								</form>
+									</td>";
+							}
+							$n++;
+						}
 					}
 				}
 				else{
@@ -75,8 +89,6 @@
 			}
 			disconnect($conn);
 		?>
-
 	</div>
-
 </body>
 </html>

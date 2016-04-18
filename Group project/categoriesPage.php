@@ -3,8 +3,8 @@
 	$permission = $_SESSION["permission"];
 	switch($permission){
 			case "administrator":
-				$page = "addUser.php";
-				$pageName = "Add User";
+				$page = "administrator.php";
+				$pageName = "Administrative Privileges";
 			break;
 
 			case "accountant":
