@@ -1,4 +1,4 @@
-<!--HTML written by Jae Woo.-->
+<!--HTML written by Scott Thompson-->
 <head>
 	<title> ADG Creative Cafe </title>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
