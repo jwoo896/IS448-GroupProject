@@ -79,12 +79,26 @@
 		function successfulReg(){
 			alert("Registration was a success!");
 		}
-		successfulReg();
+
+		function countDown(i){
+			if(i >= 0){
+				document.getElementById("count").innerHTML = i;
+				i--;
+				setTimeout(function(){countDown(i);}, 1000);
+			}
+		}
+		//successfulReg();
 	</script>
 </head>
-<body>
-	<?php  echo("$ID <br>") ?>
+<body onload="countDown(10);">
+	<span style="font-size:3em;text-align:center;vertical-align: middle;">
+	<br /><br /><br />
+
+		ID: <?php  echo("$ID") ?>
+	</span>
+	<br /><br /><br />
+	<p>Redirect in: <div id="count"></div></p>
 	<!--Content 5 is # of seconds before redirect-->
-	<meta http-equiv="Refresh" content="5;url=categoriesPage.php" />
+	<meta http-equiv="Refresh" content="10;url=categoriesPage.php" />
 </body>
 </html>
