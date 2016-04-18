@@ -69,4 +69,6 @@
 		mysql_query($query);
 	}
 	disconnect($conn);
+
+	header("Location:categoriesPage.php");
 ?>
