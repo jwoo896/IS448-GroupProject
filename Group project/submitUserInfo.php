@@ -70,5 +70,21 @@
 	}
 	disconnect($conn);
 
-	header("Location:categoriesPage.php");
+	//header("Location:categoriesPage.php");
 ?>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function successfulReg(){
+			alert("Registration was a success!");
+		}
+		successfulReg();
+	</script>
+</head>
+<body>
+	<?php  echo("$ID <br>") ?>
+	<!--Content 5 is # of seconds before redirect-->
+	<meta http-equiv="Refresh" content="5;url=categoriesPage.php" />
+</body>
+</html>
