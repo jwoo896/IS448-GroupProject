@@ -1,3 +1,4 @@
+<!--HTML and PHP written by Josh Standiford.-->
 <?php
 	require_once("libs.php");
 	credCheck();

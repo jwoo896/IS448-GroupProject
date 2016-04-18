@@ -1,3 +1,4 @@
+<!--HTML written by Jae Woo. PHP written by Scott Thompson.-->
 <?php
  	require_once("libs.php");
 	//credCheck();

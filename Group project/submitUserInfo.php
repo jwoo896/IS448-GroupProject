@@ -1,3 +1,4 @@
+<!--HTML and PHP written by Josh Standiford.-->
 <?php
 	/*
 	** Author: Josh Standiford

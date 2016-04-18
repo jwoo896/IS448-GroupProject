@@ -1,4 +1,5 @@
-<?php 
+<?php
+/*Written by Josh Standiford*/ 
 session_start();
 
 /* 
