@@ -8,7 +8,7 @@
 			break;
 
 			case "accountant":
-				$page = "asd.php";
+				$page = "generateReceipts.php";
 				$pageName = "Receipts";
 			break;
 
