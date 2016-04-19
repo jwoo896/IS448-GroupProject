@@ -1,4 +1,3 @@
-<!--Use case 2. HTML and PHP Written by Jae Woo.-->
 <?php 
 	session_start(); 
 	require_once("libs.php");
@@ -46,6 +45,7 @@
 	}
 
 ?>
+<!--Use case 2. HTML and PHP Written by Jae Woo.-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

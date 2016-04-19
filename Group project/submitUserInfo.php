@@ -1,4 +1,3 @@
-<!--HTML and PHP written by Josh Standiford.-->
 <?php
 	/*
 	** Author: Josh Standiford
@@ -73,6 +72,7 @@
 
 	//header("Location:categoriesPage.php");
 ?>
+<!--HTML and PHP written by Josh Standiford.-->
 <html>
 <head>
 	<title></title>

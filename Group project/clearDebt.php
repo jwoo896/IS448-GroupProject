@@ -1,8 +1,8 @@
-<!--Use case 4. HTML written by Jae Woo. PHP written by Brandon Tesar.-->
 <?php
 	require_once("libs.php");
 	credCheck();
 ?>
+<!--Use case 4. HTML written by Jae Woo. PHP written by Brandon Tesar.-->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
