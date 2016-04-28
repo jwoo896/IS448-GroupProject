@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 	<script type="text/javascript" src="POS.js">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
 	</script>
 </head>
 <body>
@@ -82,7 +83,7 @@
 <br/>
 		<form action="clearDebt.php" method="post">
 			<b>Clear Debt</b>
-			<input type="submit">
+			<input type="submit" onclick="clear()">
 </form>
 	</div>
 </div>

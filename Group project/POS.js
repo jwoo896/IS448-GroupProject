@@ -57,6 +57,18 @@ function retry(ajax){
 	closeModal();
 }
 
+function clear(){
+	new Ajax.Request("clearDebt.php",
+	{
+		method:"post",
+		onSuccess: display
+	});
+}
+
+function display(ajax){
+	document.write(ajax.responseText);
+}
+
 function finalize(newLocation){
 	window.location = newLocation;
 	return false;
