@@ -24,6 +24,7 @@ window.onclick = function(event){
 	}
 }*/
 
+var a = 3;
 
 //written by Scott Thompson
 function openModal(){
@@ -36,6 +37,24 @@ function showModal(){
 //writen by Jae Woo
 function closeModal(){
 	document.getElementById('confirmationModal').className = 'modalHide';	
+}
+//written by Jae Woo
+function final(){
+	new Ajax.Request("finalize.php",
+	{
+		method: "post",
+		onSuccess: respond,
+		onFailure: retry
+	});
+}
+
+//written by Jae Woo
+function respond(ajax){
+	closeModal();
+	document.write(ajax.responseText);
+}
+function retry(ajax){
+	closeModal();
 }
 
 function finalize(newLocation){

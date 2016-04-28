@@ -8,6 +8,7 @@
 	<title> ADG Creative Cafe </title>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
 </head>
 <body>
 	<?php
@@ -60,6 +61,7 @@
 			</div>
 		</div>
 		<div id="divBody">
+			<div id="ajaxResponse"></div>
 			<table border="1px">
 				<caption> Your Order </caption>
 				<tr>
@@ -101,7 +103,7 @@
 							</tr>
 						</table>
 						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
-						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'location.href="finalize.php"'>Confirm</button>
+						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'final()'>Confirm</button>
 					</div>	
 				</div>
 			</div>
