@@ -5,6 +5,7 @@
 #divWrapper {
 	min-width:500px;
 	width:79%;
+	height:auto;
 	display:block;
 	overflow:auto;
 	margin:auto;
@@ -12,6 +13,18 @@
 	padding:1%;
 	box-shadow: 0px 0px 10px grey;
 }
+#error{
+	width:100px;
+	color:red;
+}
+#suggested{
+	border:1px solid black;
+	background-color:white;
+	color:green;
+	margin-right:30px;
+	position:fixed;
+}
+
 /*written by Scott Thompson*/
 #divHeader {
 	width:100%;

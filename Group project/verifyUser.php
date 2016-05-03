@@ -9,7 +9,7 @@
 	$_SESSION["auth"] = false;
 	require_once("libs.php");
 
-		$pin = $_POST["pin"];
+		$pin = trim($_POST["pin"]);
 		$conn = connect();
 		
 

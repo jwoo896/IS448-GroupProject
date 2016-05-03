@@ -15,6 +15,7 @@ while($row = mysql_fetch_array($result)){
 }
 
 //lookup all hints from array if length of q>0
+//Code written by Dr. Sampath in auto-complete example.
 if (strlen($dataentered) > 0)
 {
   $hint="";
@@ -26,7 +27,6 @@ if (strlen($dataentered) > 0)
     if ($hint=="")
       {
          $hint=$a[$i];
-		 
       }
 	  else
       {
@@ -40,7 +40,7 @@ if (strlen($dataentered) > 0)
   $i = 0;
   foreach ($choices as $option){
 	if($i < 3){
-		echo "<li>$option</li><br/>";
+		echo "<li>" . trim($option) . "</li><br/>";
   		$i++;
   	}
   }
