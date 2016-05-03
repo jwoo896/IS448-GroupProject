@@ -1,46 +1,46 @@
 <?php
 	session_start();
 	require_once("libs.php");
-	if (!empty($_POST['deerpark'])){
-		if (!isset($_SESSION['Deer Park'])){
-			$_SESSION['Deer Park']=$_POST['deerpark'];
+	if (!empty($_POST['cliffbar'])){
+		if(!isset($_SESSION['Cliffbar'])){
+			$_SESSION['Cliffbar'] = $_POST['cliffbar'];
 		} else {
-				$_SESSION['Deer Park']+= $_POST['deerpark'];
+			$_SESSIOn['Cliffbar'] += $_POST['cliffbar'];
 		}
 	}
-	if (!empty($_POST['canadadry'])){
-		if(!isset($_SESSION['Canada Dry'])){
-			$_SESSION['Canada Dry'] = $_POST['canadadry'];
+	if (!empty($_POST['fiberone'])){
+		if(!isset($_SESSION['Fiberone'])){
+			$_SESSION['Fiberone'] = $_POST['fiberone'];
 		} else {
-			$$_SESSION["Canada Dry"] += $_POST['canadadry'];
+			$_SESSION['Fiberone'] = $_POST['fiberone'];
 		}
 	}
-	if (!empty($_POST['izze'])){
-		if(!isset($_SESSION['Izze'])){
-			$_SESSION['Izze'] = $_POST['izze'];
+	if (!empty($_POST['quakerbar'])){
+		if(!isset($_SESSION['Quaker Bar'])){
+			$_SESSION['Quaker Bar'] = $_POST['quakerbar'];
 		} else {
-			$_SESSION['Izze'] += $_POST['izze'];
-		}	
-	}		
-	if (!empty($_POST['pepsi'])){
-		if(!isset($_SESSION['Pepsi'])){
-			$_SESSION['Pepsi'] = $_POST['pepsi'];
-		} else {
-			$_SESSION['Pepsi'] += $_POST['pepsi'];
-		}		
-	}
-	if (!empty($_POST['rootbeer'])){
-		if(!isset($_SESSION['Root Beer'])){
-			$_SESSION['Root Beer'] = $_POST['rootbeer'];
-		} else {
-			$_SESSION['Root Beer'] += $_POST['rootbeer'];
+			$_SESSION['Quaker Bar'] += $_POST['quakerbar'];
 		}
 	}
-	if (!empty($_POST['sprite'])){
-		if(!isset($_SESSION['Sprite'])){
-			$_SESSION['Sprite'] = $_POST['sprite'];
+	if (!empty($_POST['kashibar'])){
+		if(!isset($_SESSION['Kashibar'])){
+			$_SESSION['Kashibar'] = $_POST['kashibar'];
 		} else {
-			$_SESSION['Sprite'] += $_POST['sprite'];
+			$_SESSION['Kashibar'] += $_POST['kashibar'];
+		}
+	}
+	if (!empty($_POST['kindbar'])){
+		if(!isset($_SESSION['Kindbar'])){
+			$_SESSION['Kindbar'] = $_POST['kindbar'];
+		} else {
+			$_SESSION['Kindbar'] += $_POST['kindbar'];
+		}
+	}
+	if (!empty($_POST['naturevalley'])){
+		if(!isset($_SESSION['Nature Valley'])){
+			$_SESSION['Nature Valley'] = $_POST['naturevalley'];
+		} else {
+			$_SESSION['Nature Valley'] += $_POST['naturevalley'];
 		}
 	}
 ?>
@@ -53,7 +53,6 @@
 	<script type="text/javascript" src="modalJs.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js" type="text/javascript"></script>
-
 </head>
 <body>
 	<div id="requestedModal" class="modal" style="display:none;">
@@ -69,16 +68,19 @@
 	  </div>
 </div>
 
+
 	<div id="divWrapper">
 	<div id="divHeader">
-		<div id="divImageHead">
+	  <div id="divImageHead">
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
 		</div>
+		
+		
 		<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
 		<div id="divMenu">
 			<div id="menuPosition">
 			<ul>
-				<li ><a href="categoriesPage.php" >Categories</a></li>
+				<li ><a href="CategoriesPage.php" >Categories</a></li>
 				<li><a href="contact.html" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
@@ -90,9 +92,10 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/deerpark.jpg" alt="Deer Park"/><br/>
-				Quantity <select name="deerpark">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/cliffbar.png" alt="Cliff Bar"/><br/>
+				Quantity <select name="cliffbar">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -106,15 +109,16 @@
 							<option>10</option>
 				 		</select>
 				 	<input type="submit" value="Add" style="display:inline;"/>
-				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('001');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('013');"/>
 			</td>
 
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
-				Quantity <select name="canadadry">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/fiberone.jpg" alt="Fiber One"/><br/>
+				Quantity <select name="fiberone">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -127,14 +131,16 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('002');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('014');"/>
 			</td>
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/izze.jpg" alt="Izze"/><br/>
-				Quantity <select name="izze">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/quakerbar.jpg" alt="Quaker Bar"/><br/>
+				Quantity <select name="quakerbar">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -147,16 +153,18 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+				<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('003');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('015');"/>			
 			</td>
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/pepsi.jpg" alt="Pepsi"/><br/>
-				Quantity <select name="pepsi">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/kashibar.png" alt="Kashi Bar"/><br/>
+				Quantity <select name="kashibar">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -169,14 +177,16 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-				 	<input type="submit" value="Add"/>
+				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('004');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('016');"/>
 			</td>
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/rootbeer.jpg" alt="Root Beer"/><br/>
-				Quantity <select name="rootbeer">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/kindbar.png" alt="Kind Bar"/><br/>
+				Quantity <select name="kindbar">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -189,14 +199,16 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('005');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('017');"/>
 			</td>
 			<td>
-			<form method="POST" action="drinksmenu.php" style="display:inline;">
-				<img src="POS design/drinks/sprite.png" alt="Sprite"/><br/>
-				Quantity <select name="Sprite">
+			<form method="POST" action="granolabars.php" style="display:inline;">
+
+				<img src="POS design/granolabars/naturevalley.jpg" alt="Nature Valley"/><br/>
+				Quantity <select name="naturevalley">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -209,14 +221,14 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-					<input type="submit" value="Add"/>
+			<input type="submit" value="Add" style="display:inline;"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('006');"/>
+				 <!--create a new php file for this? or add to cartphp?-->
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('018');"/>
 			</td>
 		</tr>
 	</table>
 </div>
 </div>
-
 </body>
 </html>

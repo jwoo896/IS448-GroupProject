@@ -1,4 +1,3 @@
-/*
 function restockNotif(){
 	alert("Out of stock. Please request more.");
 }
@@ -22,55 +21,14 @@ window.onclick = function(event){
 		}
 		
 	}
-}*/
-
-var a = 3;
-
-//written by Jae Woo
-function openModal(){
-	document.getElementById("requestedModal").style.display="block";
 }
-//written by Jae Woo
+
+
 function showModal(){
 	document.getElementById('confirmationModal').className = 'modalShow';
 }
-//writen by Jae Woo
 function closeModal(){
 	document.getElementById('confirmationModal').className = 'modalHide';	
-}
-//written by Jae Woo
-function final(){
-	new Ajax.Request("finalize.php",
-	{
-		method: "post",
-		onSuccess: respond,
-		onFailure: retry
-	});
-}
-//written by Jae Woo
-function confirmPointer(){
-	document.getElementById('confirmBtn').style.cursor='pointer';
-}
-
-//written by Jae Woo
-function respond(ajax){
-	closeModal();
-	document.write(ajax.responseText);
-}
-function retry(ajax){
-	closeModal();
-}
-
-function clear(){
-	new Ajax.Request("clearDebt.php",
-	{
-		method:"post",
-		onSuccess: display
-	});
-}
-
-function display(ajax){
-	document.write(ajax.responseText);
 }
 
 function finalize(newLocation){

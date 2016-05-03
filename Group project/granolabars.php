@@ -44,7 +44,6 @@
 		}
 	}
 ?>
-<!--Use case 2. HTML and PHP Written by Jae Woo.-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -52,31 +51,24 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
 	<script type="text/javascript" src="modalJs.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js" type="text/javascript"></script>
 </head>
-<body
-	<?php
-		if(!empty($_POST['moreRequested'])){
-			$itemNum = intval($_POST['moreRequested']);
-			$conn = connect();
-			$sql = "UPDATE inventory SET requested=1 WHERE product_id='$itemNum'";
-			$result = mysql_query($sql);
-			disconnect($conn); 
-			unset($_POST['moreRequested']);?>
-			onload="openModal();"<?php
-		}?>
->
+<body>
 	<div id="requestedModal" class="modal" style="display:none;">
 	  <!-- Modal content -->
-	  <div class="modal-content">
+	  <div class="modal-content2">
 		<div class="modal-header">
 		</div>
-		<div class="modal-body">
+		<div class="modal-body2">
 			<span>Thank you, your request has been sent</span>
 		</div>
 		<div class="modal-footer">
 		</div>
 	  </div>
 </div>
+
+
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -89,7 +81,7 @@
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.php" >Categories</a></li>
-				<li><a href="contact.php" >Contact</a></li>
+				<li><a href="contact.html" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
 			</ul>
@@ -100,7 +92,7 @@
 	<table>
 		<tr>
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/cliffbar.png" alt="Cliff Bar"/><br/>
 				Quantity <select name="cliffbar">
@@ -119,15 +111,11 @@
 				 	<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="013" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('013');"/>
 			</td>
 
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/fiberone.jpg" alt="Fiber One"/><br/>
 				Quantity <select name="fiberone">
@@ -146,14 +134,10 @@
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="granolaBars.php" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="014" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('014');"/>
 			</td>
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/quakerbar.jpg" alt="Quaker Bar"/><br/>
 				Quantity <select name="quakerbar">
@@ -172,16 +156,12 @@
 				<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="015" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('015');"/>			
 			</td>
 		</tr>
 		<tr>
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/kashibar.png" alt="Kashi Bar"/><br/>
 				Quantity <select name="kashibar">
@@ -200,14 +180,10 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="016" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('016');"/>
 			</td>
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/kindbar.png" alt="Kind Bar"/><br/>
 				Quantity <select name="kindbar">
@@ -226,14 +202,10 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="017" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('017');"/>
 			</td>
 			<td>
-			<form method="POST" action="" style="display:inline;">
+			<form method="POST" action="granolabars.php" style="display:inline;">
 
 				<img src="POS design/granolabars/naturevalley.jpg" alt="Nature Valley"/><br/>
 				Quantity <select name="naturevalley">
@@ -252,11 +224,7 @@
 			<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<form method="POST" action="" style="display:inline;">
-					<input type="hidden" name="moreRequested" value="018" />
-					<input type="submit" value="Request more" style="display:inline;"/>				 	
-
-			</form>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('018');"/>
 			</td>
 		</tr>
 	</table>

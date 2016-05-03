@@ -26,7 +26,7 @@ window.onclick = function(event){
 
 var a = 3;
 
-//written by Jae Woo
+//written by Scott Thompson
 function openModal(){
 	document.getElementById("requestedModal").style.display="block";
 }
