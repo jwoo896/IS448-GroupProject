@@ -1,14 +1,12 @@
 <?php
 	session_start();
 ?>
-<!--Use case 3. Written by Jae Woo -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title> ADG Creative Cafe </title>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
 </head>
 <body>
 	<?php
@@ -42,26 +40,25 @@
 		}
 	?>
 	<div id="divWrapper">
-		<div id="divImageHead">
-			<p>
+	<div id="divHeader">
+	  <div id="divImageHead">
 				<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
-			</p>
 		</div>
-	
-	
-	<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
+		
+		
+		<!--create a selector for positioning of top "menu" items. Possibly add styling to the fonts.-->
 		<div id="divMenu">
 			<div id="menuPosition">
-				<ul>
-					<li><a href="categoriesPage.php">Categories</a></li>
-					<li><a href="contact.php">Contact</a></li>
-					<li><a href="logout.php">Logout</a></li>
-					<li><a href="cart.php">Cart</a></li>
-				</ul>
+			<ul>
+				<li ><a href="CategoriesPage.php" >Categories</a></li>
+				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="logout.php" >Logout</a></li>
+				<li><a href="cart.php" >Cart</a></li>
+			</ul>
 			</div>
 		</div>
+	</div>
 		<div id="divBody">
-			<div id="ajaxResponse"></div>
 			<table border="1px">
 				<caption> Your Order </caption>
 				<tr>
@@ -83,7 +80,7 @@
 				</tr>
 			</table>
 
-			<button id = 'confirmBtn' class = 'modal-submit' onmouseover="this.style.cursor='pointer';" onclick = "showModal()">Confirm</button>
+			<button id = 'confirmBtn' class = 'modal-submit' onclick = "showModal()">Confirm</button>
 	
 			<div id = 'confirmationModal' class = 'modalHide'>
 				<div class = 'modal-content'>
@@ -102,9 +99,12 @@
 								<td><?php $totalUp = $totalUp + $tax; echo $totalUp?></td>
 							</tr>
 						</table>
-						<button id = 'modalCancelBtn' class = 'modal-submit' onmouseover="this.style.cursor='pointer';" onclick = 'closeModal();'>Cancel</button>
-						<button id = 'modalConfirmBtn' class = 'modal-submit' onmouseover="this.style.cursor='pointer';" onclick = 'final()'>Confirm</button>
+						<button id = 'modalCancelBtn' class = 'modal-submit' onclick = 'closeModal();'>Cancel</button>
+						<button id = 'modalConfirmBtn' class = 'modal-submit' onclick = 'location.href="finalize.php"'>Confirm</button>
 					</div>	
+			<!--<form class = 'modal-submit' method = "POST" action = "">
+				<input type = 'submit' name='submitForm' value = 'Submit'/>
+			</form>-->
 				</div>
 			</div>
 		</div>
