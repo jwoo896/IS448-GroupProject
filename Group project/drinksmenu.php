@@ -108,7 +108,7 @@
 				 	<input type="submit" value="Add" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('001');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('01');" id="01"/>
 			</td>
 
 			<td>
@@ -129,7 +129,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('002');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('02');" id="02"/>
 			</td>
 			<td>
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
@@ -149,7 +149,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('003');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('03');" id="03"/>
 			</td>
 		</tr>
 		<tr>
@@ -171,7 +171,7 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('004');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('04');" id="04"/>
 			</td>
 			<td>
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
@@ -191,7 +191,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('005');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('05');" id="05"/>
 			</td>
 			<td>
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
@@ -211,7 +211,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('006');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('06');" id="06"/>
 			</td>
 		</tr>
 	</table>

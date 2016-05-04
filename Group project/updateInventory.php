@@ -5,5 +5,5 @@
 	$sql = "UPDATE inventory SET requested=1 WHERE product_id='$prodId'";
 	$result = mysql_query($sql);
 	disconnect($conn);
-	echo "Product Id: $prodId";
+	echo "$prodId";
 ?>

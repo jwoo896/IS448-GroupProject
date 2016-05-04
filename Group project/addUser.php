@@ -23,7 +23,7 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-			<li><a href="categoriesPage.html">Categories</a></li>
+			<li><a href="categoriesPage.php">Categories</a></li>
 		<li><a href="contact.php">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>

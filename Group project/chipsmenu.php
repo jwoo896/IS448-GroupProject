@@ -108,7 +108,7 @@
 				 		</select>
 				 	<input type="submit" value="Add" style="display:inline;"/>
 				 </form>
-				 <input type="submit" value="Request more" style="display:inline;" onclick="showModal('007');"/>
+				 <input type="submit" value="Request more" style="display:inline;" onclick="showModal('007');" id="07"/>
 
 			</td>
 
@@ -130,7 +130,7 @@
 				 		</select>
 					<input type="submit" value="Add" style="display:inline;"/>
 				</form>
-				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('008');"/>
+				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('008');" id="08"/>
 			</td>
 			<td>
 			<form method="POST" action="chipsmenu.php" style="display:inline;">
@@ -150,7 +150,7 @@
 				 		</select>
 					<input type="submit" value="Add" style="display:inline;"/>
 				</form>
-				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('009');"/>
+				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('009');" id="09"/>
 			</td>
 		</tr>
 		<tr>
@@ -172,7 +172,7 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 				</form>
-				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('010');"/>
+				<input type="submit" value="Request more" style="display:inline;" onclick="showModal('010');" id="10"/>
 			</td>
 			<td>
 			<form method="POST" action="chipsmenu.php" style="display:inline;">
@@ -195,7 +195,7 @@
 
 
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('011');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('011');" id="11"/>
 			</td>
 			<td>
 			<form method="POST" action="chipsmenu.php" style="display:inline;">
@@ -214,7 +214,7 @@
 							<option>10</option>
 				 		</select>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('012');"/>			
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('012');" id="12"/>			
 			</td>
 		</tr>
 	</table>

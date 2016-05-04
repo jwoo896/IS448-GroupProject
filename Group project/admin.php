@@ -3,28 +3,17 @@
 	//credCheck();
 //session_destroy();
 ?>
-<!--HTML written by Jae Woo. PHP written by Scott Thompson.-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title> ADG Creative Cafe </title>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 	<script type="text/javascript" src="POS.js"></script>
+	<script type="text/javascript" src="modalJs.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js" type="text/javascript"></script>
 </head>
-<body
-	<?php
-		if(!empty($_POST['completedRequest'])){
-			$itemNum = intval($_POST['completedRequest']);
-			$conn = connect();
-			$sql = "UPDATE inventory SET quantity = restock_quantity WHERE product_id='$itemNum'";
-			$result = mysql_query($sql);
-			$sql = "UPDATE inventory SET requested=0 WHERE product_id='$itemNum'";
-			$result = mysql_query($sql);
-			disconnect($conn); 
-			unset($_POST['completedRequest']);?>
-			onload="openModal();"<?php
-		}?>
->
+<body>
 	<div id="divWrapper">
 	<div id="divHeader">
 	  <div id="divImageHead">
@@ -47,10 +36,11 @@
 			$conn = connect();
 			$sql = "SELECT `productName`, `product_id`, `quantity`  FROM `inventory` WHERE requested = 1";
 			$result = mysql_query($sql) or die(mysql_error);
+			$t = 100;
 			if(($result)|| (mysql_errno == 0))
 			{
 				echo "<h3>Requested Items</h3>";
-				echo "<table class='tableStriped'><tr>";
+				echo "<table class='tableStriped' id='adminTable'><tr>";
 				if(mysql_num_rows($result)>0)
 				{
 					$i = 0;
@@ -63,7 +53,8 @@
 					while($rows = mysql_fetch_array($result,MYSQL_ASSOC))
 					{
 						$n = 0;
-						echo "<tr>";
+						echo "<tr id='$t' onmouseover=\"changeTableBackground('$t')\" onmouseout=\"revertTableBackground('$t')\">";
+						$t++;
 						foreach($rows as $data)
 						{
 								echo "<td>". $data . "</td>";
@@ -72,12 +63,7 @@
 						foreach($rows as $data)
 						{
 							if($n == 1) {
-								echo "<td>
-										<form method='POST' action='admin.php'>
-										<input type='hidden' value='" . $data . "' name='completedRequest'/>
-										<input type='submit' value='Complete Request'/>
-								</form>
-									</td>";
+								echo "<td><input type='submit' value='Complete Request' onclick='alertAdmin(". $data . ")' id='". $data ."'/></td>";
 							}
 							$n++;
 						}

@@ -81,7 +81,7 @@
 				 	<input type="submit" value="Add"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('031');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('031');" id="31"/>
 			</td>
 
 			<td>
@@ -102,7 +102,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('032');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('032');" id="32"/>
 			</td>
 		</tr>			
 	</table>

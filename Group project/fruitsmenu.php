@@ -110,7 +110,7 @@
 				 	<input type="submit" value="Add" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('019');"/>			
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('019');" id="19"/>			
 			</td>
 
 			<td>
@@ -131,7 +131,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('020');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('020');" id="20"/>
 			</td>
 			<td>
 			<form method="POST" action="fruitsmenu.php" style="display:inline;">
@@ -151,7 +151,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('021');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('021');" id="21"/>
 			</td>
 		</tr>
 		<tr>
@@ -173,7 +173,7 @@
 				 		</select>
 				 	<input type="submit" value="Add"/>
 				</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('022');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('022');" id="22"/>
 			</td>
 			<td>
 			<form method="POST" action="fruitsmenu.php" style="display:inline;">
@@ -193,7 +193,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 				</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('023');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('023');" id="23"/>
 			</td>
 			<td>
 			<form method="POST" action="fruitsmenu.php" style="display:inline;">
@@ -213,7 +213,7 @@
 				 		</select>
 					<input type="submit" value="Add"/>
 			</form>
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('024');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('024');" id="24"/>
 			</td>
 		</tr>
 	</table>

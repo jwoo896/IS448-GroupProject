@@ -111,7 +111,7 @@
 				 	<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('013');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('013');" id="13"/>
 			</td>
 
 			<td>
@@ -134,7 +134,7 @@
 					<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('014');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('014');" id="14"/>
 			</td>
 			<td>
 			<form method="POST" action="granolabars.php" style="display:inline;">
@@ -156,7 +156,7 @@
 				<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('015');"/>			
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('015');" id="15"/>			
 			</td>
 		</tr>
 		<tr>
@@ -180,7 +180,7 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('016');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('016');" id="16"/>
 			</td>
 			<td>
 			<form method="POST" action="granolabars.php" style="display:inline;">
@@ -202,7 +202,7 @@
 				 <input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('017');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('017');" id="17"/>
 			</td>
 			<td>
 			<form method="POST" action="granolabars.php" style="display:inline;">
@@ -224,7 +224,7 @@
 			<input type="submit" value="Add" style="display:inline;"/>
 			</form>
 				 <!--create a new php file for this? or add to cartphp?-->
-			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('018');"/>
+			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('018');" id="18"/>
 			</td>
 		</tr>
 	</table>
