@@ -77,3 +77,19 @@ function finalize(newLocation){
 	window.location = newLocation;
 	return false;
 }
+
+
+//written by Brandon Tesar
+function highlightTableRow(rowID,myColor){
+    //alert(rowID);
+    document.getElementById(rowID).style.backgroundColor = myColor;
+}
+
+function unhighlightTableRow(rowID){
+    //alert(rowID);
+    if (rowID%2 == 1){
+    document.getElementById(rowID).style.backgroundColor = '#E9E9E9';
+}else{
+    document.getElementById(rowID).style.backgroundColor = '#FFFFFF';
+}
+}

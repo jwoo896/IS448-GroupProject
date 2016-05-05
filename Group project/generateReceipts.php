@@ -2,7 +2,6 @@
 	require_once("libs.php");
 	credCheck();
 ?>
-<!--Use case 4. HTML written by Jae Woo. PHP written by Brandon Tesar.-->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,14 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 	<script type="text/javascript" src="POS.js">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
 	</script>
 </head>
 <body>
 	<div id="divWrapper">
-	<div id="divHeader">
 	<div id="divImageHead">
+		<p>
 			<img src="POS design/adgcreativeicon.png" alt="ADG Creative Icon" height="100"/>
+		</p>
 	</div>
 
 
@@ -26,16 +25,18 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-			<li><a href="categoriesPage.php">Categories</a></li>
-		<li><a href="contact.php">Contact</a></li>
+			<li><a href="categoriesPage.html">Categories</a></li>
+		<li><a href="contact.html">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		<li><a href="generateReceipts.php">Receipts</a></li>
 		</ul>
 		</div>
 	</div>
-</div>
 
+	<p>
+	<hr/>
+	</p>
 	<div id="divBody">
 
 	 	<?php
@@ -57,33 +58,37 @@
 		if (!$numberOfPosts){
   		echo "select query failed";
 			}
+
     echo "<table><tr><td><b>First Name</b></td><td><b>Last Name</b></td><td><b>Debt</b></td></tr></table>";
 		echo "<table class = 'tableStriped'>";
-
+		$rowID = 1;
 
 			for ($row_num = 1; $row_num <= $numberOfPosts; $row_num++){
-	  $row_array = mysql_fetch_array($select);
+	  	$row_array = mysql_fetch_array($select);
 	?>
-	    	<tr><td>
+	    	<tr id= <?php echo $rowID;?>
+					onmouseover="javascript:highlightTableRow(<?php echo $rowID; ?>, '#ffff88');"
+					onmouseout="javascript:unhighlightTableRow(<?php echo $rowID; ?>);"><td>
+
 	      <?php print("$row_array[first_name]");?></td><td>
 	      <?php print("$row_array[last_name]");?></td><td>
 	      <?php print("$row_array[debt]");?></td></tr>
 <?php
+		$rowID = $rowID + 1;
 			}
 
 		echo "</table>";
 
 		disconnect($conn);
 	 ?>
-		<!--This PHP clears all employee debt and submits the previous debt to be emailed
-
+		<!--This PHP clears all employee debt
 		<form method="POST" action="sendUserData.php">
 		<input type="submit" value="Submit"/> -->
-		
+
 <br/>
 		<form action="clearDebt.php" method="post">
 			<b>Clear Debt</b>
-			<input type="submit" onclick="clear()">
+			<input type="submit">
 </form>
 	</div>
 </div>
