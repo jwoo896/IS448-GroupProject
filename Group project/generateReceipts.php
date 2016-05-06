@@ -8,7 +8,8 @@
 <head>
 	<title> ADG Creative Cafe </title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js"></script>
 	<script type="text/javascript" src="POS.js">
 	</script>
 </head>
@@ -25,8 +26,8 @@
 	<div id="divMenu">
 		<div id="menuPosition">
 		<ul>
-			<li><a href="categoriesPage.html">Categories</a></li>
-		<li><a href="contact.html">Contact</a></li>
+			<li><a href="categoriesPage.php">Categories</a></li>
+		<li><a href="contact.php">Contact</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="cart.php">Cart</a></li>
 		<li><a href="generateReceipts.php">Receipts</a></li>
@@ -60,7 +61,7 @@
 			}
 
     echo "<table><tr><td><b>First Name</b></td><td><b>Last Name</b></td><td><b>Debt</b></td></tr></table>";
-		echo "<table class = 'tableStriped'>";
+		echo "<table class = 'tableStriped' id = 'debtTable'>";
 		$rowID = 1;
 
 			for ($row_num = 1; $row_num <= $numberOfPosts; $row_num++){
@@ -68,11 +69,20 @@
 	?>
 	    	<tr id= <?php echo $rowID;?>
 					onmouseover="javascript:highlightTableRow(<?php echo $rowID; ?>, '#ffff88');"
-					onmouseout="javascript:unhighlightTableRow(<?php echo $rowID; ?>);"><td>
+					onmouseout="javascript:unhighlightTableRow(<?php echo $rowID; ?>);">
+				<td>
+	      	<?php print("$row_array[first_name]");?>
+				</td>
+				<td>
+	      	<?php print("$row_array[last_name]");?>
+				</td>
+				<td>
+	      	<div id = <?php echo $rowID.C; ?>>
+						<?php print("$row_array[debt]");?>
+					</div>
+				</td>
 
-	      <?php print("$row_array[first_name]");?></td><td>
-	      <?php print("$row_array[last_name]");?></td><td>
-	      <?php print("$row_array[debt]");?></td></tr>
+			</tr>
 <?php
 		$rowID = $rowID + 1;
 			}
@@ -86,10 +96,8 @@
 		<input type="submit" value="Submit"/> -->
 
 <br/>
-		<form action="clearDebt.php" method="post">
-			<b>Clear Debt</b>
-			<input type="submit">
-</form>
+
+			<input type="button" onclick="debtClear()" value ="Clear Debt"></input>
 	</div>
 </div>
 

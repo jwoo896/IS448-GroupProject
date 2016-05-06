@@ -79,7 +79,7 @@
 			<div id="menuPosition">
 			<ul>
 				<li ><a href="categoriesPage.php" >Categories</a></li>
-				<li><a href="contact.html" >Contact</a></li>
+				<li><a href="contact.php" >Contact</a></li>
 				<li><a href="logout.php" >Logout</a></li>
 				<li><a href="cart.php" >Cart</a></li>
 			</ul>
@@ -92,7 +92,7 @@
 			<td>
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
 				<img src="POS design/drinks/deerpark.jpg" alt="Deer Park"/><br/>
-				Quantity <select name="deerpark">
+				Quantity <select class ="quantity" name="deerpark">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>
@@ -105,7 +105,7 @@
 							<option>9</option>
 							<option>10</option>
 				 		</select>
-				 	<input type="submit" value="Add" style="display:inline;"/>
+				 	<input type="submit" value="Add" onclick="add(0)" style="display:inline;"/>
 				 <!--create a new php file for this? or add to cartphp?-->
 			</form>
 			<input type="submit" value="Request more" style="display:inline;" onclick="showModal('01');" id="01"/>
@@ -114,7 +114,7 @@
 			<td>
 			<form method="POST" action="drinksmenu.php" style="display:inline;">
 				<img src="POS design/drinks/canadadry.png" alt="Canada Dry"/><br/>
-				Quantity <select name="canadadry">
+				Quantity <select class ="quantity" name="canadadry">
 							<option>0</option>
 							<option>1</option>
 							<option>2</option>

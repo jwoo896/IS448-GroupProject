@@ -20,7 +20,7 @@ window.onclick = function(event){
 				openDropdown.classList.remove('show');
 			}
 		}
-		
+
 	}
 }*/
 
@@ -36,9 +36,19 @@ function showModal(){
 }
 //writen by Jae Woo
 function closeModal(){
-	document.getElementById('confirmationModal').className = 'modalHide';	
+	document.getElementById('confirmationModal').className = 'modalHide';
 }
 //written by Jae Woo
+function add(value){
+	var item = getElementsByClassName("quantity");
+	var n = item[value];
+	alert(n);
+	/*new Ajax.Request("addItem.php",
+	{
+		method="post",
+		parameters()
+	});*/
+}
 function final(){
 	new Ajax.Request("finalize.php",
 	{
@@ -61,18 +71,31 @@ function retry(ajax){
 	closeModal();
 }
 
-function clear(){
-	new Ajax.Request("clearDebt.php",
-	{
-		method:"post",
-		onSuccess: display
-	});
-}
+//written by Brandon Tesar
+function debtClear(){
 
+	new Ajax.Request( "clearDebt.php",
+  {
+    method: "post",
+    onSuccess: display
+  } );
+
+}
+//Brandon Tesar
 function display(ajax){
-	document.write(ajax.responseText);
+	var numRows = document.getElementById("debtTable").rows.length;
+if (ajax.responseText == ""){
+
+	for (i = 1; i < numRows + 1; i++) {
+		document.getElementById(i+"C").innerHTML = 0;
 }
 
+}else{
+	alert("FAILED QUERY: " + ajax.responseText);
+}
+
+}
+//Jae Woo
 function finalize(newLocation){
 	window.location = newLocation;
 	return false;
