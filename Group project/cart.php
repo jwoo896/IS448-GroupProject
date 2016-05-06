@@ -1,5 +1,21 @@
 <?php
 	session_start();
+	$permission = $_SESSION["permission"];
+ 	switch($permission){
+ 			case "administrator":
+				$page = "administrator.php";
+				$pageName = "Administrative Privileges";
+ 			break;
+ 
+ 			case "accountant":
+				$page = "generateReceipts.php";
+ 				$pageName = "Receipts";
+ 			break;
+
+ 			default: 
+ 				//No Credentials
+ 			break;
+ 		}
 ?>
 <!--Use case 3. Written by Jae Woo -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -53,6 +69,7 @@
 		<div id="divMenu">
 			<div id="menuPosition">
 				<ul>
+					<li><a href=<?php echo("'$page'> $pageName") ?></a></li>
 					<li><a href="categoriesPage.php">Categories</a></li>
 					<li><a href="contact.php">Contact</a></li>
 					<li><a href="logout.php">Logout</a></li>
