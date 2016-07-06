@@ -8,7 +8,7 @@ session_start();
 function connect(){
 
 	$db ="jWoo";
-	$conn = mysql_connect("192.168.1.94/phpmyadmin", "root", "1Asxdcfv");
+	$conn = mysql_connect("192.168.1.94/phpmyadmin:3307", "root", "1Asxdcfv");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
