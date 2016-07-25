@@ -8,16 +8,15 @@ session_start();
 function connect(){
 
 	$db ="mysql";
-	//VERY IMPORTANT: use mysqli no mysql documentation
-	$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
+	$conn = mysqli_connect("192.168.1.94/phpmyadmin/", "root", "1Asxdcfv");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
-	/*finish phpmyadmin config below
-	$er = mysql_select_db("user_login");
+	//finish phpmyadmin config below
+	$er = mysql_select_db("mysql");
 	if(!$er){
 		echo("Could not find table name");
-	}*/
+	}
 	return $conn;
 }
 /* 
