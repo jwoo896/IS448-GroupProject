@@ -14,13 +14,15 @@
 		
 
 
-		$result = mysql_fetch_array( mysql_query("SELECT pin, permissions, first_name, last_name, debt FROM user_login WHERE pin = '$pin'"));
+		//$result = mysql_fetch_array( mysql_query("SELECT pin, permissions, first_name, last_name, debt FROM user_login WHERE pin = '$pin'"));
+		$result = $conn->query("SELECT pin, permissions, first_name, last_name, debt FROM user_login WHERE pin = '$pin'");
 		$_SESSION['pin'] = $pin;
-		$fname = $result['first_name'];
-		$lname = $result['last_name'];
+		$row = $result->fetch_assoc();
+		$fname = $row['first_name'];
+		$lname = $row['last_name'];
 		$userName = $fname . " " . $lname;
 	
-		$permission = $result["permissions"];
+		$permission = $row["permissions"];
 		$_SESSION["permission"] = $permission;
 		switch($permission){
 			case "administrator":
