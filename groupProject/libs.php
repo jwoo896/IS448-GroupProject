@@ -8,6 +8,7 @@ session_start();
 function connect(){
 
 	$db ="mysql";
+	//VERY IMPORTANT: USE DOCUMENTATION FOR PHP 5.5 AND UP...
 	$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
 	if(!$conn){
 		echo("Could not connect to MySQL");
