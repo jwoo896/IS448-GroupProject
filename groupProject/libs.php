@@ -9,7 +9,7 @@ function connect(){
 
 	$db ="mysql";
 	//$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
-	$conn = mysql_connect("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv");
+	$conn = mysqli_connect("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
