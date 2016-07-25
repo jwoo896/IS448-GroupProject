@@ -13,7 +13,7 @@ function connect(){
 		echo("Could not connect to MySQL");
 	}
 	//finish phpmyadmin config below
-	$er = mysql_select_db("jWoo");
+	$er = mysql_select_db("user_login");
 	if(!$er){
 		echo("Could not find table name");
 	}
