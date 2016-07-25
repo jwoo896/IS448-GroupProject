@@ -10,8 +10,8 @@ function connect(){
 	$db ="mysql";
 	//$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
 	$conn = mysqli_connect("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
-	if(!$conn){
-		echo("Could not connect to MySQL");
+	if(mysqli_connect_errno()){
+		echo("Could not connect to MySQL" . mysqli_connect_error());
 	}
 	/*finish phpmyadmin config below
 	$er = mysql_select_db("mysql");
