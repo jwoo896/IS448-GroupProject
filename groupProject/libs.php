@@ -13,12 +13,12 @@ function connect(){
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
-	/*finish phpmyadmin config below
+	//finish phpmyadmin config below
 	$er = mysql_select_db("user_login");
 	if(!$er){
 		echo("Could not find table name");
 	}
-	return $conn;*/
+	return $conn;
 }
 /* 
 ** Desc: Disconnects MYSQL object 
