@@ -8,8 +8,8 @@ session_start();
 function connect(){
 
 	$db ="mysql";
-	//$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
-	$conn = mysqli_connect("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv");
+	$conn = new mysqli("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv", "mysql");
+	//$conn = mysqli_connect("71.244.148.17/phpmyadmin/", "root", "1Asxdcfv");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
