@@ -8,12 +8,12 @@ session_start();
 function connect(){
 
 	$db ="mysql";
-	$conn = mysql_connect("71.244.148.17/phpmyadmin", "root", "1Asxdcfv");
+	$conn = mysqli_connect("71.244.148.17/phpmyadmin", "root", "1Asxdcfv");
 	if(!$conn){
 		echo("Could not connect to MySQL");
 	}
 	//finish phpmyadmin config below
-	$er = mysql_select_db("user_login");
+	$er = mysql_select_db("mysql");
 	if(!$er){
 		echo("Could not find table name");
 	}
