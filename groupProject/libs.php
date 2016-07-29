@@ -8,7 +8,7 @@ session_start();
 function connect(){
 
 	$db ="mysql";
-	$conn = new mysqli("71.244.148.17", "root", "1Asxdcfv", "mysql");
+	$conn = new mysqli("192.168.1.94", "root", "1Asxdcfv", "mysql");
 	//$conn = mysqli_connect("71.244.148.17", "root", "1Asxdcfv", "mysql");
 	if(mysqli_connect_errno()){
 		echo("Could not connect to MySQL" . mysqli_connect_error());
