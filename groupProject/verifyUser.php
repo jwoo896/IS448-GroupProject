@@ -17,7 +17,7 @@
 		//$result = mysqli_fetch_array( mysqli_query("SELECT pin, permissions, first_name, last_name, debt FROM user_login WHERE pin = '$pin'"));
 		$result = $conn->query("SELECT pin, permissions, first_name, last_name, debt FROM user_login WHERE pin = '$pin'");
 		$_SESSION['pin'] = $pin;
-		$row = $result->fetch_array(MYSQLI_NUM);
+		$row = $result->fetch_array(MYSQLI_BOTH);
 		$fname = $row['first_name'];
 		$lname = $row['last_name'];
 		$userName = $fname . " " . $lname;
