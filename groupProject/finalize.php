@@ -65,7 +65,7 @@
 		if ($item != 'auth' && $item != 'User' && $item != 'pin' && $item != 'permission'){
 			if ($qvarRow['productName'] = $item){
 				$quvar = $qvarRow['quantity'] - $quantity;
-				$quQry = $conn->query("UPDATE inventory SET quantity = $quvar WHERE productName = $item");
+				$quQry = $conn->query("UPDATE inventory SET quantity = $quvar WHERE productName = '$item'");
 				//mysql_query("UPDATE inventory SET quantity = $quvar WHERE productName = '$item'");
 			}
 		}
