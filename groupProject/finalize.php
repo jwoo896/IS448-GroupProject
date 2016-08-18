@@ -51,16 +51,20 @@
 }
 
 	$conn = connect();
-	$dvar = mysql_fetch_array(mysql_query("SELECT debt FROM user_login WHERE pin = $pin"));
-	$uvar = $dvar['debt'] + $totalUp;
-	$uqry = "UPDATE user_login SET debt = $uvar WHERE pin = $pin";
-	mysql_query($uqry);
+	//$dvar = mysql_fetch_array(mysql_query("SELECT debt FROM user_login WHERE pin = $pin"));
+	$dvar = $conn->query("SELECT debt FROM user_login WHERE pin = $pin");
+	$dvarRow = $dvar->fetch_array(MYSQLI_BOTH);
+	$uvar = $dvarRow['debt'] + $totalUp;
+	$uqry = $conn->query("UPDATE user_login SET debt = $uvar WHERE pin = $pin");
+	//mysql_query($uqry);
 
-	$qvar = mysql_fetch_array(mysql_query("SELECT productName, quantity FROM inventory"));
+	//$qvar = mysql_fetch_array(mysql_query("SELECT productName, quantity FROM inventory"));
+	$qvar = $conn->query("SELECT productName, quantity FROM inventory");
+	$qvarRow = $qvar->fetch_array(MYSQLI_BOTH);
 	foreach ($_SESSION as $item => $quantity) {
 		if ($item != 'auth' && $item != 'User' && $item != 'pin' && $item != 'permission'){
-			if ($qvar['productName'] = $item){
-				$quvar = $qvar['quantity'] - $quantity;
+			if ($qvarRow['productName'] = $item){
+				$quvar = $qvarRow['quantity'] - $quantity;
 				mysql_query("UPDATE inventory SET quantity = $quvar WHERE productName = '$item'");
 			}
 		}
