@@ -27,7 +27,7 @@
 	
 			foreach($_SESSION as $item => $quantity){
 			if ($item != 'auth' && $item != 'User' && $item != 'pin' && $item != 'permission'){
-				$filevar = fopen("groupProject/receipts.txt", "a+") or die ("Could not find file.");
+				$filevar = fopen("receipts.txt", "a+") or die ("Could not find file.");
 				$strq = strval($quantity);
 				flock($filevar, LOCK_EX);
 				fwrite($filevar, "Item: $item, ");
@@ -42,7 +42,7 @@
 		}
 		$totalWtax = totalUpTax($totalUpModal);
 		$strt = strval($totalWtax);
-		$filevar = fopen("groupProject/receipts.txt", "a+") or die ("Could not find file.");
+		$filevar = fopen("receipts.txt", "a+") or die ("Could not find file.");
 		flock($filevar, LOCK_EX);
 		fwrite($filevar, "Total: $strt\n"); 
 		flock($filevar, LOCK_UN);
