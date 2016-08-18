@@ -19,6 +19,7 @@
 
 	function writeToFile(){
 		global $totalUpModal;
+		//apache has default read access to txt files but not write. have to chmod 777 *.txt
 		$filevar = fopen("receipts.txt", "a+") or die ("Could not find file.");
 		flock($filevar, LOCK_EX);
 		fwrite($filevar, "$_SESSION[User]\n");
